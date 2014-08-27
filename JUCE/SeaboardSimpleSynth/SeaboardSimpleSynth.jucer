@@ -5,14 +5,14 @@
               jucerVersion="3.1.0">
   <MAINGROUP id="FAXyTw" name="SeaboardSimpleSynth">
     <GROUP id="{A736765E-8B15-DF13-56E2-DC90F6F9E2E6}" name="SeaboardLibraryCode">
-      <FILE id="l4F6Wy" name="BinaryData.cpp" compile="1" resource="0" file="../SeaboardLibraryCode/BinaryData.cpp"/>
-      <FILE id="r2rev0" name="BinaryData.h" compile="0" resource="0" file="../SeaboardLibraryCode/BinaryData.h"/>
-      <FILE id="h7xTME" name="Seaboard.cpp" compile="1" resource="0" file="../SeaboardLibraryCode/Seaboard.cpp"/>
-      <FILE id="t7XCIR" name="Seaboard.h" compile="0" resource="0" file="../SeaboardLibraryCode/Seaboard.h"/>
-      <FILE id="aPNuHE" name="SeaboardPlayer.cpp" compile="1" resource="0"
-            file="../SeaboardLibraryCode/SeaboardPlayer.cpp"/>
-      <FILE id="xw6YUa" name="SeaboardVoice.cpp" compile="1" resource="0"
-            file="../SeaboardLibraryCode/SeaboardVoice.cpp"/>
+      <FILE id="HUuXJ9" name="BinaryData.cpp" compile="1" resource="0" file="../Library/SeaboardLibraryCode/BinaryData.cpp"/>
+      <FILE id="SO3n3s" name="BinaryData.h" compile="0" resource="0" file="../Library/SeaboardLibraryCode/BinaryData.h"/>
+      <FILE id="iNrLgk" name="Seaboard.cpp" compile="1" resource="0" file="../Library/SeaboardLibraryCode/Seaboard.cpp"/>
+      <FILE id="reytbe" name="Seaboard.h" compile="0" resource="0" file="../Library/SeaboardLibraryCode/Seaboard.h"/>
+      <FILE id="xECsLo" name="SeaboardPlayer.cpp" compile="1" resource="0"
+            file="../Library/SeaboardLibraryCode/SeaboardPlayer.cpp"/>
+      <FILE id="L8aMHZ" name="SeaboardVoice.cpp" compile="1" resource="0"
+            file="../Library/SeaboardLibraryCode/SeaboardVoice.cpp"/>
     </GROUP>
     <GROUP id="{023BAF37-CDC5-1675-1ACF-939DBA96E33C}" name="Source">
       <FILE id="HClE9q" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
@@ -33,19 +33,19 @@
                        isDebug="0" optimisation="2" targetName="SeaboardSimpleSynth"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_core" path="../modules"/>
-        <MODULEPATH id="juce_events" path="../modules"/>
-        <MODULEPATH id="juce_graphics" path="../modules"/>
-        <MODULEPATH id="juce_data_structures" path="../modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../modules"/>
-        <MODULEPATH id="juce_cryptography" path="../modules"/>
-        <MODULEPATH id="juce_video" path="../modules"/>
-        <MODULEPATH id="juce_opengl" path="../modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../modules"/>
+        <MODULEPATH id="juce_core" path="../Library/modules"/>
+        <MODULEPATH id="juce_events" path="../Library/modules"/>
+        <MODULEPATH id="juce_graphics" path="../Library/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../Library/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../Library/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../Library/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../Library/modules"/>
+        <MODULEPATH id="juce_video" path="../Library/modules"/>
+        <MODULEPATH id="juce_opengl" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../Library/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
   </EXPORTFORMATS>

@@ -12,7 +12,7 @@
 #define SEABOARDVISUALISER_H_INCLUDED
 
 #include "../JuceLibraryCode/JuceHeader.h"
-#include "../../SeaboardLibraryCode/Seaboard.h"
+#include "../../Library/SeaboardLibraryCode/Seaboard.h"
 
 /*
  This is a simple example of a visualiser Component for incoming Seaboard data.
