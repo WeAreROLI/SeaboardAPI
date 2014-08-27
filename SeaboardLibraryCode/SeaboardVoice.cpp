@@ -23,7 +23,7 @@ struct SeaboardSound : public SynthesiserSound
 
 
 //==============================================================================
-/** We overwrite the SynthesiserVoice class to implement polyphonic control */
+/** An abstract SeaboardVoice. Subclasses of this should overwrite the various midi response methods in order to implement the desired response behaviour. */
 struct SeaboardVoice  : public SynthesiserVoice
 {
     SeaboardVoice()
@@ -44,6 +44,7 @@ struct SeaboardVoice  : public SynthesiserVoice
 		return channel;
 	}
 	
+	/* Midi Response Functions */
     void startNote (int midiNoteNumber, float velocity,
                     SynthesiserSound*, int /*currentPitchWheelPosition*/) override
     {
@@ -68,6 +69,7 @@ struct SeaboardVoice  : public SynthesiserVoice
     {
     }
 	
+	/* Main Sound Generation Loop. Subclasses should overwrite this in order to implement their own signal generation. */
     void renderNextBlock (AudioSampleBuffer& outputBuffer, int startSample, int numSamples) override
     {
 		

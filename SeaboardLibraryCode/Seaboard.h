@@ -31,6 +31,9 @@ public:
 	class Listener
 	{
 	public:
+		/*
+		 The following functions should be overwritten by subclasses of Seaboard::Listener in order to respond to midi data from the Seaboard.
+		 */
 		virtual ~Listener() {};
 		virtual void seaboardDidGetNoteOn(const MidiMessage&) {};
 		virtual void seaboardDidGetNoteOff(const MidiMessage&) {};
@@ -38,6 +41,9 @@ public:
 		virtual void seaboardDidGetPitchBend(const MidiMessage&) {};
 		virtual void seaboardDidGetMessage(const MidiMessage&) {};
 	};
+	/*
+	 These functions are used to add/remove listener objects to Seaboard objects.
+	 */
 	void addListener(Listener *listener);
 	void removeListener(Listener *listener);
 	
@@ -45,7 +51,7 @@ private:
 	void handleIncomingMidiMessage(MidiInput* source, const MidiMessage& message);
 	void findSeaboard();
 	
-	ListenerList<Listener> listeners;
+	ListenerList<Listener> listeners; //A list of Seaboard::Listener objects that receive midi data from this Seaboard object.
 	MidiInput *theSeaboardMIDIInput;
 };
 

@@ -49,7 +49,7 @@ struct SeaboardSynth : public Synthesiser
 		{
 			SeaboardVoice* const voice = (SeaboardVoice*)voices.getUnchecked (i);
 			
-			if ((midiChannel <= 0 || voice->getCurrentChannel()==midiChannel))// voice->isPlayingChannel (midiChannel)
+			if ((midiChannel <= 0 || voice->getCurrentChannel()==midiChannel))
 				voice->pitchWheelMoved (wheelValue);
 		}
 	}
@@ -92,7 +92,7 @@ struct SeaboardSynth : public Synthesiser
 				SeaboardVoice* voice = (SeaboardVoice*)findFreeVoice(sound, true);
 				voice->assignToChannel(midiChannel);
 				startVoice (voice,
-							sound, midiChannel, midiNoteNumber, velocity);//shouldStealNotes
+							sound, midiChannel, midiNoteNumber, velocity);
 			}
 		}
 	}
