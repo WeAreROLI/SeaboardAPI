@@ -23,7 +23,7 @@ struct SeaboardSound : public SynthesiserSound
 
 
 //==============================================================================
-/** An abstract SeaboardVoice. Subclasses of this should overwrite the various midi response methods in order to implement the desired response behaviour. */
+/** An abstract voice for the seaboard. Subclasses of this should overwrite the various midi response methods in order to implement the desired response behaviour. */
 struct SeaboardVoice  : public SynthesiserVoice
 {
     SeaboardVoice()
@@ -44,27 +44,27 @@ struct SeaboardVoice  : public SynthesiserVoice
 		return channel;
 	}
 	
-	/* Midi Response Functions */
+	/** Called when Midi Note On messages are received. Subclasses should overwrite this and implement the desired Note On behaviour. */
     void startNote (int midiNoteNumber, float velocity,
                     SynthesiserSound*, int /*currentPitchWheelPosition*/) override
     {
 		
     }
-	
+	/** Called when Midi Note Off messages are received. Subclasses should overwrite this and implement the desired Note Off behaviour. */
     void stopNote (bool allowTailOff) override
     {
 		
     }
-	
+	/** Called when Midi Pitch Bend messages are received. Subclasses should overwrite this and implement the desired Pitch Bend behaviour. */
     void pitchWheelMoved (int bend) override
     {
 		
     }
-	
+	/** Called when Midi Aftertouch messages are received. Subclasses should overwrite this and implement the desired Aftertouch behaviour. */
 	void aftertouchChanged (int aftertouch) override
 	{
 	}
-	
+	/** Called when Midi Control Change messages are received. Subclasses should overwrite this and implement the desired Control Change behaviour. */
     void controllerMoved (int /*controllerNumber*/, int /*newValue*/) override
     {
     }

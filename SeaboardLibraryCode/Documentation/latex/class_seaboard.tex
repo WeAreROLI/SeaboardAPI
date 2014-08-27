@@ -1,0 +1,65 @@
+\hypertarget{class_seaboard}{\section{Seaboard Class Reference}
+\label{class_seaboard}\index{Seaboard@{Seaboard}}
+}
+
+
+{\ttfamily \#include $<$Seaboard.\-h$>$}
+
+Inheritance diagram for Seaboard\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_seaboard}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_seaboard_1_1_listener}{Listener}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_seaboard_a743d5d77a721161d976c94826d9831e0}{$\sim$\-Seaboard} ()
+\item 
+void \hyperlink{class_seaboard_a42baffad758f8eda105157b56234c668}{add\-Listener} (\hyperlink{class_seaboard_1_1_listener}{Listener} $\ast$listener)
+\item 
+void \hyperlink{class_seaboard_ad66eafdd9aa94c203f8634598d74bcaf}{remove\-Listener} (\hyperlink{class_seaboard_1_1_listener}{Listener} $\ast$listener)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_seaboard}{Seaboard} Class connects to the \hyperlink{class_seaboard}{Seaboard} as a M\-I\-D\-I\-Device, and converts incoming messages into a series of \hyperlink{class_seaboard_1_1_listener}{Seaboard\-::\-Listener} callbacks
+
+To use, subclass Seboard\-::\-Listener, and implement the virutal methods relevant to you. You then need to register your class to the \hyperlink{class_seaboard}{Seaboard} objects Listener\-List using the \hyperlink{class_seaboard_a42baffad758f8eda105157b56234c668}{add\-Listener()} method 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_seaboard_a743d5d77a721161d976c94826d9831e0}{\index{Seaboard@{Seaboard}!$\sim$\-Seaboard@{$\sim$\-Seaboard}}
+\index{$\sim$\-Seaboard@{$\sim$\-Seaboard}!Seaboard@{Seaboard}}
+\subsubsection[{$\sim$\-Seaboard}]{\setlength{\rightskip}{0pt plus 5cm}Seaboard\-::$\sim$\-Seaboard (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_seaboard_a743d5d77a721161d976c94826d9831e0}
+Search through the available Midi input devices for one named \hyperlink{class_seaboard}{Seaboard}. If it is found, stop it, then delete the\-Seaboard\-M\-I\-D\-I\-Input. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_seaboard_a42baffad758f8eda105157b56234c668}{\index{Seaboard@{Seaboard}!add\-Listener@{add\-Listener}}
+\index{add\-Listener@{add\-Listener}!Seaboard@{Seaboard}}
+\subsubsection[{add\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-::add\-Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf Seaboard\-::\-Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}\label{class_seaboard_a42baffad758f8eda105157b56234c668}
+This function adds an instance of \hyperlink{class_seaboard_1_1_listener}{Seaboard\-::\-Listener} as a listener to this \hyperlink{class_seaboard}{Seaboard} object. Once a \hyperlink{class_seaboard_1_1_listener}{Seaboard\-::\-Listener} object has been added as a listener to a \hyperlink{class_seaboard}{Seaboard} object, it can receive the call backs that the \hyperlink{class_seaboard}{Seaboard} object calls in response to Midi data from the \hyperlink{class_seaboard}{Seaboard}. \hypertarget{class_seaboard_ad66eafdd9aa94c203f8634598d74bcaf}{\index{Seaboard@{Seaboard}!remove\-Listener@{remove\-Listener}}
+\index{remove\-Listener@{remove\-Listener}!Seaboard@{Seaboard}}
+\subsubsection[{remove\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-::remove\-Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf Seaboard\-::\-Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}\label{class_seaboard_ad66eafdd9aa94c203f8634598d74bcaf}
+This function removes a given \hyperlink{class_seaboard_1_1_listener}{Seaboard\-::\-Listener} object from this object`s list of listeners. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Seaboard.\-h\item 
+Seaboard.\-cpp\end{DoxyCompactItemize}

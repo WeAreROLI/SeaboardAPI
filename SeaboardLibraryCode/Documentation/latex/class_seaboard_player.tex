@@ -1,0 +1,79 @@
+\hypertarget{class_seaboard_player}{\section{Seaboard\-Player Class Reference}
+\label{class_seaboard_player}\index{Seaboard\-Player@{Seaboard\-Player}}
+}
+Inheritance diagram for Seaboard\-Player\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_seaboard_player}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_seaboard_player_a1aba40c2857902dd8791b178d6789a37}{add\-New\-Voice} (\hyperlink{struct_seaboard_voice}{Seaboard\-Voice} $\ast$new\-Voice)
+\item 
+void \hyperlink{class_seaboard_player_a3ff4a96e05fcfd68875912e6ff767895}{add\-Message\-To\-Queue} (const juce\-::\-Midi\-Message \&message)
+\item 
+void \hyperlink{class_seaboard_player_a89fca5da52c1fc92f23b700d3911c5e1}{seaboard\-Did\-Get\-Note\-On} (const juce\-::\-Midi\-Message \&message)
+\item 
+void \hyperlink{class_seaboard_player_a75c19846bba8e3a90c469cd82f9cc8a9}{seaboard\-Did\-Get\-Note\-Off} (const juce\-::\-Midi\-Message \&message)
+\item 
+void \hyperlink{class_seaboard_player_aaaf64d0212d0f5ca8dd96f3c0cb9797d}{seaboard\-Did\-Get\-Pitch\-Bend} (const juce\-::\-Midi\-Message \&message)
+\item 
+void \hyperlink{class_seaboard_player_a38806fb083fff421268d8f61dbfbb211}{seaboard\-Did\-Get\-Aftertouch} (const juce\-::\-Midi\-Message \&message)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_seaboard_player}{Seaboard\-Player} is used to play sounds in response to incoming data from the seaboard. In order to produce sound from seaboard input you should create a \hyperlink{class_seaboard_player}{Seaboard\-Player} and add it as a listener to a Seaboad object (using the add\-Listener() function).
+
+In order to play sound you can then add custom voices using \hyperlink{class_seaboard_player_a1aba40c2857902dd8791b178d6789a37}{add\-New\-Voice()}. These custom voices should inherit \hyperlink{struct_seaboard_voice}{Seaboard\-Voice}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_seaboard_player_a3ff4a96e05fcfd68875912e6ff767895}{\index{Seaboard\-Player@{Seaboard\-Player}!add\-Message\-To\-Queue@{add\-Message\-To\-Queue}}
+\index{add\-Message\-To\-Queue@{add\-Message\-To\-Queue}!SeaboardPlayer@{Seaboard\-Player}}
+\subsubsection[{add\-Message\-To\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Player\-::add\-Message\-To\-Queue (
+\begin{DoxyParamCaption}
+\item[{const juce\-::\-Midi\-Message \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_seaboard_player_a3ff4a96e05fcfd68875912e6ff767895}
+Add an incoming midi message to the queue. This is called by the various \hyperlink{class_seaboard}{Seaboard} responder functions. \hypertarget{class_seaboard_player_a1aba40c2857902dd8791b178d6789a37}{\index{Seaboard\-Player@{Seaboard\-Player}!add\-New\-Voice@{add\-New\-Voice}}
+\index{add\-New\-Voice@{add\-New\-Voice}!SeaboardPlayer@{Seaboard\-Player}}
+\subsubsection[{add\-New\-Voice}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Player\-::add\-New\-Voice (
+\begin{DoxyParamCaption}
+\item[{{\bf Seaboard\-Voice} $\ast$}]{new\-Voice}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_seaboard_player_a1aba40c2857902dd8791b178d6789a37}
+Adds a \hyperlink{struct_seaboard_voice}{Seaboard\-Voice} object to the audio source. \hypertarget{class_seaboard_player_a38806fb083fff421268d8f61dbfbb211}{\index{Seaboard\-Player@{Seaboard\-Player}!seaboard\-Did\-Get\-Aftertouch@{seaboard\-Did\-Get\-Aftertouch}}
+\index{seaboard\-Did\-Get\-Aftertouch@{seaboard\-Did\-Get\-Aftertouch}!SeaboardPlayer@{Seaboard\-Player}}
+\subsubsection[{seaboard\-Did\-Get\-Aftertouch}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Player\-::seaboard\-Did\-Get\-Aftertouch (
+\begin{DoxyParamCaption}
+\item[{const juce\-::\-Midi\-Message \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_seaboard_player_a38806fb083fff421268d8f61dbfbb211}
+\hyperlink{class_seaboard}{Seaboard} Aftertouch responder. \hypertarget{class_seaboard_player_a75c19846bba8e3a90c469cd82f9cc8a9}{\index{Seaboard\-Player@{Seaboard\-Player}!seaboard\-Did\-Get\-Note\-Off@{seaboard\-Did\-Get\-Note\-Off}}
+\index{seaboard\-Did\-Get\-Note\-Off@{seaboard\-Did\-Get\-Note\-Off}!SeaboardPlayer@{Seaboard\-Player}}
+\subsubsection[{seaboard\-Did\-Get\-Note\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Player\-::seaboard\-Did\-Get\-Note\-Off (
+\begin{DoxyParamCaption}
+\item[{const juce\-::\-Midi\-Message \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_seaboard_player_a75c19846bba8e3a90c469cd82f9cc8a9}
+\hyperlink{class_seaboard}{Seaboard} Note Off responder. \hypertarget{class_seaboard_player_a89fca5da52c1fc92f23b700d3911c5e1}{\index{Seaboard\-Player@{Seaboard\-Player}!seaboard\-Did\-Get\-Note\-On@{seaboard\-Did\-Get\-Note\-On}}
+\index{seaboard\-Did\-Get\-Note\-On@{seaboard\-Did\-Get\-Note\-On}!SeaboardPlayer@{Seaboard\-Player}}
+\subsubsection[{seaboard\-Did\-Get\-Note\-On}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Player\-::seaboard\-Did\-Get\-Note\-On (
+\begin{DoxyParamCaption}
+\item[{const juce\-::\-Midi\-Message \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_seaboard_player_a89fca5da52c1fc92f23b700d3911c5e1}
+\hyperlink{class_seaboard}{Seaboard} Note On responder. \hypertarget{class_seaboard_player_aaaf64d0212d0f5ca8dd96f3c0cb9797d}{\index{Seaboard\-Player@{Seaboard\-Player}!seaboard\-Did\-Get\-Pitch\-Bend@{seaboard\-Did\-Get\-Pitch\-Bend}}
+\index{seaboard\-Did\-Get\-Pitch\-Bend@{seaboard\-Did\-Get\-Pitch\-Bend}!SeaboardPlayer@{Seaboard\-Player}}
+\subsubsection[{seaboard\-Did\-Get\-Pitch\-Bend}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Player\-::seaboard\-Did\-Get\-Pitch\-Bend (
+\begin{DoxyParamCaption}
+\item[{const juce\-::\-Midi\-Message \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_seaboard_player_aaaf64d0212d0f5ca8dd96f3c0cb9797d}
+\hyperlink{class_seaboard}{Seaboard} Pitch Bend responder. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Seaboard\-Player.\-cpp\end{DoxyCompactItemize}

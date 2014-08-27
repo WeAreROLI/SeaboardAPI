@@ -28,10 +28,14 @@
 #include "BinaryData.h"
 #include "SeaboardVoice.cpp"
 //==============================================================================
-/** We overwrite the JUCE Synthesiser class to allow for polyphonic pitch bend and aftertouch control **/
-
+/** A Seaboard Synth object that facilitates polyphonic parameter control. This class is used by SeaboardPlayer objects. 
+	In order to produce sound from seaboard input you should create a SeaboardPlayer object and add it as a listener to a
+	Seaboard object. Custom voices can be added to a SeaboardSynth through SeaboardPlayer, by using the SeaboardPlayer::addNewVoice() function.
+	The SeaboardVoice::renderNextBlock() function will be called by the parent class of SeaboardSynth, juce::Synthesiser.
+ **/
 struct SeaboardSynth : public Synthesiser
 {
+	/** Calls the stopNote() function for a given SeaboardVoice */
 	void stopVoice (SynthesiserVoice* voice, const bool allowTailOff)
 	{
 		jassert (voice != nullptr);
@@ -41,6 +45,7 @@ struct SeaboardSynth : public Synthesiser
 		// the subclass MUST call clearCurrentNote() if it's not tailing off! RTFM for stopNote()!
 		jassert (allowTailOff || (voice->getCurrentlyPlayingNote() < 0 && voice->getCurrentlyPlayingSound() == 0));
 	}
+	/** Calls the pitchWheelMoved() function for a given SeaboardVoice */
 	void handlePitchWheel (const int midiChannel, const int wheelValue)
 	{
 		const ScopedLock sl (lock);
@@ -53,6 +58,7 @@ struct SeaboardSynth : public Synthesiser
 				voice->pitchWheelMoved (wheelValue);
 		}
 	}
+	/** Calls the afterTouchChanged() function for a given SeaboardVoice */
 	void handleAftertouch (int midiChannel, int midiNoteNumber, int aftertouchValue)
 	{
 		const ScopedLock sl (lock);
@@ -66,6 +72,7 @@ struct SeaboardSynth : public Synthesiser
 				voice->aftertouchChanged (aftertouchValue);
 		}
 	}
+	/** Checks whether a given note is still ringing, and stops it if it is. Then calls the startVoice() function for a given SeaboardVoice */
 	void noteOn (const int midiChannel,
 							  const int midiNoteNumber,
 							  const float velocity)
@@ -98,7 +105,7 @@ struct SeaboardSynth : public Synthesiser
 	}
 };
 //==============================================================================
-// This is an audio source that streams the output of our demo synth.
+/** This is an audio source that streams the output of our demo synth. */
 struct SynthAudioSource  : public AudioSource
 {
     SynthAudioSource ()
@@ -109,13 +116,18 @@ struct SynthAudioSource  : public AudioSource
 		//In order to play the sound we need to add some voices
 		//using the addNewVoice method
     }
-
+	/** Adds a new SeaboardSound to the SeaboardSynth */
     void setUsingSynthesisSound()
     {
         synth.clearSounds();
         synth.addSound (new SeaboardSound());
     }
-
+	/** Adds a SynthesiserVoice to the SeaboardSynth. Note that a SeaboardSound must be added using setUsingSynthesisSound() before the SeaboardSynth can play sounds. */
+	void addNewVoice(SynthesiserVoice* newVoice)
+	{
+		synth.addVoice(newVoice);
+	}
+	/** Adds a new Sampler sound to the SeaboardVoice */
 	void setUsingSampledSound()
     {
         WavAudioFormat wavFormat;
@@ -139,11 +151,6 @@ struct SynthAudioSource  : public AudioSource
                                           ));
     }
 	
-	void addNewVoice(SynthesiserVoice* newVoice)
-	{
-		synth.addVoice(newVoice);
-	}
-	
     void prepareToPlay (int /*samplesPerBlockExpected*/, double sampleRate) override
     {
         midiCollector.reset (sampleRate);
@@ -154,7 +161,8 @@ struct SynthAudioSource  : public AudioSource
     void releaseResources() override
     {
     }
-
+	
+	/** Process incoming midi messages from the midi input, then call the renderNextBlock() function of the SeaboardSynth (inherited from juce::Synthesiser). */
     void getNextAudioBlock (const AudioSourceChannelInfo& bufferToFill) override
     {
         // the synth always adds its output to the audio buffer, so we have to clear it
@@ -170,16 +178,22 @@ struct SynthAudioSource  : public AudioSource
     }
 
     //==============================================================================
-    // this collects real-time midi messages from the midi input device, and
-    // turns them into blocks that we can process in our audio callback
+    /// this collects real-time midi messages from the midi input device, and
+    /// turns them into blocks that we can process in our audio callback
     MidiMessageCollector midiCollector;
 
     // the synth itself!
     SeaboardSynth synth;
-	// the number of independent voices (polyphony number).
 };
 
 //==============================================================================
+/** The SeaboardPlayer is used to play sounds in response to incoming data from the seaboard. 
+	In order to produce sound from seaboard input you should create a SeaboardPlayer and add it
+	as a listener to a Seaboad object (using the addListener() function). 
+ 
+	In order to play sound you can then add custom voices using addNewVoice().
+	These custom voices should inherit SeaboardVoice.
+ */
 class SeaboardPlayer : public Seaboard::Listener
 {
 public:
@@ -200,28 +214,33 @@ public:
         deviceManager->removeMidiInputCallback (String::empty, &(synthAudioSource->midiCollector));
         deviceManager->removeAudioCallback (&audioSourcePlayer);
     }
+	/** Adds a SeaboardVoice object to the audio source. */
 	void addNewVoice(SeaboardVoice* newVoice)
 	{
 		synthAudioSource->addNewVoice(newVoice);
 	}
+	/** Add an incoming midi message to the queue. This is called by the various Seaboard responder functions.*/
 	void addMessageToQueue(const juce::MidiMessage &message)
 	{
 		synthAudioSource->midiCollector.addMessageToQueue(message);
 	}
     //==============================================================================
-	// Seaboard responders
+	/** Seaboard Note On responder. */
 	void seaboardDidGetNoteOn(const juce::MidiMessage &message)
 	{
 		addMessageToQueue(message);
 	}
+	/** Seaboard Note Off responder. */
 	void seaboardDidGetNoteOff(const juce::MidiMessage &message)
 	{
 		addMessageToQueue(message);
 	}
+	/** Seaboard Pitch Bend responder. */
 	void seaboardDidGetPitchBend(const juce::MidiMessage & message)
 	{
 		addMessageToQueue(message);
 	}
+	/** Seaboard Aftertouch responder. */
 	void seaboardDidGetAftertouch(const juce::MidiMessage & message)
 	{
 		addMessageToQueue(message);

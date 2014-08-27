@@ -1,0 +1,79 @@
+\hypertarget{struct_synth_audio_source}{\section{Synth\-Audio\-Source Struct Reference}
+\label{struct_synth_audio_source}\index{Synth\-Audio\-Source@{Synth\-Audio\-Source}}
+}
+Inheritance diagram for Synth\-Audio\-Source\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_synth_audio_source}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_synth_audio_source_ada38fa8e024834b76bbc7d57870e1259}{set\-Using\-Synthesis\-Sound} ()
+\item 
+void \hyperlink{struct_synth_audio_source_ab05f34320b8f2ef573bd31119a766e62}{add\-New\-Voice} (Synthesiser\-Voice $\ast$new\-Voice)
+\item 
+void \hyperlink{struct_synth_audio_source_a541b410a17592aac9e477c660fea67bc}{set\-Using\-Sampled\-Sound} ()
+\item 
+\hypertarget{struct_synth_audio_source_a9923d4a5011b0a3c73cebca9c7214077}{void {\bfseries prepare\-To\-Play} (int, double sample\-Rate) override}\label{struct_synth_audio_source_a9923d4a5011b0a3c73cebca9c7214077}
+
+\item 
+\hypertarget{struct_synth_audio_source_ac443459932ce478082ddc5c2765d919b}{void {\bfseries release\-Resources} () override}\label{struct_synth_audio_source_ac443459932ce478082ddc5c2765d919b}
+
+\item 
+void \hyperlink{struct_synth_audio_source_a4126f6e765478013a6c060b722af3d68}{get\-Next\-Audio\-Block} (const Audio\-Source\-Channel\-Info \&buffer\-To\-Fill) override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Midi\-Message\-Collector \hyperlink{struct_synth_audio_source_aac0466f0cf4680f25de5cd2789b4bb7c}{midi\-Collector}
+\item 
+\hypertarget{struct_synth_audio_source_a791f6c2b8ce8f5964314f4107acc1304}{\hyperlink{struct_seaboard_synth}{Seaboard\-Synth} {\bfseries synth}}\label{struct_synth_audio_source_a791f6c2b8ce8f5964314f4107acc1304}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is an audio source that streams the output of our demo synth. 
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_synth_audio_source_ab05f34320b8f2ef573bd31119a766e62}{\index{Synth\-Audio\-Source@{Synth\-Audio\-Source}!add\-New\-Voice@{add\-New\-Voice}}
+\index{add\-New\-Voice@{add\-New\-Voice}!SynthAudioSource@{Synth\-Audio\-Source}}
+\subsubsection[{add\-New\-Voice}]{\setlength{\rightskip}{0pt plus 5cm}void Synth\-Audio\-Source\-::add\-New\-Voice (
+\begin{DoxyParamCaption}
+\item[{Synthesiser\-Voice $\ast$}]{new\-Voice}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_synth_audio_source_ab05f34320b8f2ef573bd31119a766e62}
+Adds a Synthesiser\-Voice to the \hyperlink{struct_seaboard_synth}{Seaboard\-Synth}. Note that a \hyperlink{struct_seaboard_sound}{Seaboard\-Sound} must be added using \hyperlink{struct_synth_audio_source_ada38fa8e024834b76bbc7d57870e1259}{set\-Using\-Synthesis\-Sound()} before the \hyperlink{struct_seaboard_synth}{Seaboard\-Synth} can play sounds. \hypertarget{struct_synth_audio_source_a4126f6e765478013a6c060b722af3d68}{\index{Synth\-Audio\-Source@{Synth\-Audio\-Source}!get\-Next\-Audio\-Block@{get\-Next\-Audio\-Block}}
+\index{get\-Next\-Audio\-Block@{get\-Next\-Audio\-Block}!SynthAudioSource@{Synth\-Audio\-Source}}
+\subsubsection[{get\-Next\-Audio\-Block}]{\setlength{\rightskip}{0pt plus 5cm}void Synth\-Audio\-Source\-::get\-Next\-Audio\-Block (
+\begin{DoxyParamCaption}
+\item[{const Audio\-Source\-Channel\-Info \&}]{buffer\-To\-Fill}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}}\label{struct_synth_audio_source_a4126f6e765478013a6c060b722af3d68}
+Process incoming midi messages from the midi input, then call the render\-Next\-Block() function of the \hyperlink{struct_seaboard_synth}{Seaboard\-Synth} (inherited from juce\-::\-Synthesiser). \hypertarget{struct_synth_audio_source_a541b410a17592aac9e477c660fea67bc}{\index{Synth\-Audio\-Source@{Synth\-Audio\-Source}!set\-Using\-Sampled\-Sound@{set\-Using\-Sampled\-Sound}}
+\index{set\-Using\-Sampled\-Sound@{set\-Using\-Sampled\-Sound}!SynthAudioSource@{Synth\-Audio\-Source}}
+\subsubsection[{set\-Using\-Sampled\-Sound}]{\setlength{\rightskip}{0pt plus 5cm}void Synth\-Audio\-Source\-::set\-Using\-Sampled\-Sound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_synth_audio_source_a541b410a17592aac9e477c660fea67bc}
+Adds a new Sampler sound to the \hyperlink{struct_seaboard_voice}{Seaboard\-Voice} \hypertarget{struct_synth_audio_source_ada38fa8e024834b76bbc7d57870e1259}{\index{Synth\-Audio\-Source@{Synth\-Audio\-Source}!set\-Using\-Synthesis\-Sound@{set\-Using\-Synthesis\-Sound}}
+\index{set\-Using\-Synthesis\-Sound@{set\-Using\-Synthesis\-Sound}!SynthAudioSource@{Synth\-Audio\-Source}}
+\subsubsection[{set\-Using\-Synthesis\-Sound}]{\setlength{\rightskip}{0pt plus 5cm}void Synth\-Audio\-Source\-::set\-Using\-Synthesis\-Sound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_synth_audio_source_ada38fa8e024834b76bbc7d57870e1259}
+Adds a new \hyperlink{struct_seaboard_sound}{Seaboard\-Sound} to the \hyperlink{struct_seaboard_synth}{Seaboard\-Synth} 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_synth_audio_source_aac0466f0cf4680f25de5cd2789b4bb7c}{\index{Synth\-Audio\-Source@{Synth\-Audio\-Source}!midi\-Collector@{midi\-Collector}}
+\index{midi\-Collector@{midi\-Collector}!SynthAudioSource@{Synth\-Audio\-Source}}
+\subsubsection[{midi\-Collector}]{\setlength{\rightskip}{0pt plus 5cm}Midi\-Message\-Collector Synth\-Audio\-Source\-::midi\-Collector}}\label{struct_synth_audio_source_aac0466f0cf4680f25de5cd2789b4bb7c}
+this collects real-\/time midi messages from the midi input device, and turns them into blocks that we can process in our audio callback 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Seaboard\-Player.\-cpp\end{DoxyCompactItemize}

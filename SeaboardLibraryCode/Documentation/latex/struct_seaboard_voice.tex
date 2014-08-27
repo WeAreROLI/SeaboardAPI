@@ -1,0 +1,84 @@
+\hypertarget{struct_seaboard_voice}{\section{Seaboard\-Voice Struct Reference}
+\label{struct_seaboard_voice}\index{Seaboard\-Voice@{Seaboard\-Voice}}
+}
+Inheritance diagram for Seaboard\-Voice\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_seaboard_voice}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_seaboard_voice_a183492fcd78d01ff3953f11afad77f38}{bool {\bfseries can\-Play\-Sound} (Synthesiser\-Sound $\ast$sound) override}\label{struct_seaboard_voice_a183492fcd78d01ff3953f11afad77f38}
+
+\item 
+\hypertarget{struct_seaboard_voice_a4a5e73cc70fcd4ffbb85b92832b09d52}{void {\bfseries assign\-To\-Channel} (int channel\-Num)}\label{struct_seaboard_voice_a4a5e73cc70fcd4ffbb85b92832b09d52}
+
+\item 
+\hypertarget{struct_seaboard_voice_a19ebdb5c571e624bdd42b3492976ef4b}{int {\bfseries get\-Current\-Channel} ()}\label{struct_seaboard_voice_a19ebdb5c571e624bdd42b3492976ef4b}
+
+\item 
+void \hyperlink{struct_seaboard_voice_a636f6b832a2caf65888a33012f4d0e80}{start\-Note} (int midi\-Note\-Number, float velocity, Synthesiser\-Sound $\ast$, int) override
+\item 
+void \hyperlink{struct_seaboard_voice_a5f939f503e0cd2804a05c6f5c24cf80f}{stop\-Note} (bool allow\-Tail\-Off) override
+\item 
+void \hyperlink{struct_seaboard_voice_ab2ad0ecedab846f4114bd36759587a31}{pitch\-Wheel\-Moved} (int bend) override
+\item 
+void \hyperlink{struct_seaboard_voice_a2155c54e1ec50cc644d0f9d7f35a2a45}{aftertouch\-Changed} (int aftertouch) override
+\item 
+void \hyperlink{struct_seaboard_voice_a315bbe67d968e1cbd053623a7b1cda7a}{controller\-Moved} (int, int) override
+\item 
+\hypertarget{struct_seaboard_voice_a2398839d0cffc137a2512669b9f0938f}{void {\bfseries render\-Next\-Block} (Audio\-Sample\-Buffer \&output\-Buffer, int start\-Sample, int num\-Samples) override}\label{struct_seaboard_voice_a2398839d0cffc137a2512669b9f0938f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract voice for the seaboard. Subclasses of this should overwrite the various midi response methods in order to implement the desired response behaviour. 
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_seaboard_voice_a2155c54e1ec50cc644d0f9d7f35a2a45}{\index{Seaboard\-Voice@{Seaboard\-Voice}!aftertouch\-Changed@{aftertouch\-Changed}}
+\index{aftertouch\-Changed@{aftertouch\-Changed}!SeaboardVoice@{Seaboard\-Voice}}
+\subsubsection[{aftertouch\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Voice\-::aftertouch\-Changed (
+\begin{DoxyParamCaption}
+\item[{int}]{aftertouch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}}\label{struct_seaboard_voice_a2155c54e1ec50cc644d0f9d7f35a2a45}
+Called when Midi Aftertouch messages are received. Subclasses should overwrite this and implement the desired Aftertouch behaviour. \hypertarget{struct_seaboard_voice_a315bbe67d968e1cbd053623a7b1cda7a}{\index{Seaboard\-Voice@{Seaboard\-Voice}!controller\-Moved@{controller\-Moved}}
+\index{controller\-Moved@{controller\-Moved}!SeaboardVoice@{Seaboard\-Voice}}
+\subsubsection[{controller\-Moved}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Voice\-::controller\-Moved (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}}\label{struct_seaboard_voice_a315bbe67d968e1cbd053623a7b1cda7a}
+Called when Midi Control Change messages are received. Subclasses should overwrite this and implement the desired Control Change behaviour. \hypertarget{struct_seaboard_voice_ab2ad0ecedab846f4114bd36759587a31}{\index{Seaboard\-Voice@{Seaboard\-Voice}!pitch\-Wheel\-Moved@{pitch\-Wheel\-Moved}}
+\index{pitch\-Wheel\-Moved@{pitch\-Wheel\-Moved}!SeaboardVoice@{Seaboard\-Voice}}
+\subsubsection[{pitch\-Wheel\-Moved}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Voice\-::pitch\-Wheel\-Moved (
+\begin{DoxyParamCaption}
+\item[{int}]{bend}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}}\label{struct_seaboard_voice_ab2ad0ecedab846f4114bd36759587a31}
+Called when Midi Pitch Bend messages are received. Subclasses should overwrite this and implement the desired Pitch Bend behaviour. \hypertarget{struct_seaboard_voice_a636f6b832a2caf65888a33012f4d0e80}{\index{Seaboard\-Voice@{Seaboard\-Voice}!start\-Note@{start\-Note}}
+\index{start\-Note@{start\-Note}!SeaboardVoice@{Seaboard\-Voice}}
+\subsubsection[{start\-Note}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Voice\-::start\-Note (
+\begin{DoxyParamCaption}
+\item[{int}]{midi\-Note\-Number, }
+\item[{float}]{velocity, }
+\item[{Synthesiser\-Sound $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}}\label{struct_seaboard_voice_a636f6b832a2caf65888a33012f4d0e80}
+Called when Midi Note On messages are received. Subclasses should overwrite this and implement the desired Note On behaviour. \hypertarget{struct_seaboard_voice_a5f939f503e0cd2804a05c6f5c24cf80f}{\index{Seaboard\-Voice@{Seaboard\-Voice}!stop\-Note@{stop\-Note}}
+\index{stop\-Note@{stop\-Note}!SeaboardVoice@{Seaboard\-Voice}}
+\subsubsection[{stop\-Note}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Voice\-::stop\-Note (
+\begin{DoxyParamCaption}
+\item[{bool}]{allow\-Tail\-Off}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}}\label{struct_seaboard_voice_a5f939f503e0cd2804a05c6f5c24cf80f}
+Called when Midi Note Off messages are received. Subclasses should overwrite this and implement the desired Note Off behaviour. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Seaboard\-Voice.\-cpp\end{DoxyCompactItemize}

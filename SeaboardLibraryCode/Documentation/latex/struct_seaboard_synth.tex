@@ -1,0 +1,65 @@
+\hypertarget{struct_seaboard_synth}{\section{Seaboard\-Synth Struct Reference}
+\label{struct_seaboard_synth}\index{Seaboard\-Synth@{Seaboard\-Synth}}
+}
+Inheritance diagram for Seaboard\-Synth\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_seaboard_synth}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_seaboard_synth_ac76b6b1e3e71db714d80c65ae28f4515}{stop\-Voice} (Synthesiser\-Voice $\ast$voice, const bool allow\-Tail\-Off)
+\item 
+void \hyperlink{struct_seaboard_synth_a3becf141c150948d70d7264cabb1f75d}{handle\-Pitch\-Wheel} (const int midi\-Channel, const int wheel\-Value)
+\item 
+void \hyperlink{struct_seaboard_synth_a0d9117ea98c40718e751116de211f16e}{handle\-Aftertouch} (int midi\-Channel, int midi\-Note\-Number, int aftertouch\-Value)
+\item 
+void \hyperlink{struct_seaboard_synth_a57c45f23af1233a27ab4bbdd3ff0f6be}{note\-On} (const int midi\-Channel, const int midi\-Note\-Number, const float velocity)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{class_seaboard}{Seaboard} Synth object that facilitates polyphonic parameter control. This class is used by \hyperlink{class_seaboard_player}{Seaboard\-Player} objects. In order to produce sound from seaboard input you should create a \hyperlink{class_seaboard_player}{Seaboard\-Player} object and add it as a listener to a \hyperlink{class_seaboard}{Seaboard} object. Custom voices can be added to a \hyperlink{struct_seaboard_synth}{Seaboard\-Synth} through \hyperlink{class_seaboard_player}{Seaboard\-Player}, by using the \hyperlink{class_seaboard_player_a1aba40c2857902dd8791b178d6789a37}{Seaboard\-Player\-::add\-New\-Voice()} function. The Seaboard\-Voice\-::render\-Next\-Block() function will be called by the parent class of \hyperlink{struct_seaboard_synth}{Seaboard\-Synth}, juce\-::\-Synthesiser. 
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_seaboard_synth_a0d9117ea98c40718e751116de211f16e}{\index{Seaboard\-Synth@{Seaboard\-Synth}!handle\-Aftertouch@{handle\-Aftertouch}}
+\index{handle\-Aftertouch@{handle\-Aftertouch}!SeaboardSynth@{Seaboard\-Synth}}
+\subsubsection[{handle\-Aftertouch}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Synth\-::handle\-Aftertouch (
+\begin{DoxyParamCaption}
+\item[{int}]{midi\-Channel, }
+\item[{int}]{midi\-Note\-Number, }
+\item[{int}]{aftertouch\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_seaboard_synth_a0d9117ea98c40718e751116de211f16e}
+Calls the after\-Touch\-Changed() function for a given \hyperlink{struct_seaboard_voice}{Seaboard\-Voice} \hypertarget{struct_seaboard_synth_a3becf141c150948d70d7264cabb1f75d}{\index{Seaboard\-Synth@{Seaboard\-Synth}!handle\-Pitch\-Wheel@{handle\-Pitch\-Wheel}}
+\index{handle\-Pitch\-Wheel@{handle\-Pitch\-Wheel}!SeaboardSynth@{Seaboard\-Synth}}
+\subsubsection[{handle\-Pitch\-Wheel}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Synth\-::handle\-Pitch\-Wheel (
+\begin{DoxyParamCaption}
+\item[{const int}]{midi\-Channel, }
+\item[{const int}]{wheel\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_seaboard_synth_a3becf141c150948d70d7264cabb1f75d}
+Calls the pitch\-Wheel\-Moved() function for a given \hyperlink{struct_seaboard_voice}{Seaboard\-Voice} \hypertarget{struct_seaboard_synth_a57c45f23af1233a27ab4bbdd3ff0f6be}{\index{Seaboard\-Synth@{Seaboard\-Synth}!note\-On@{note\-On}}
+\index{note\-On@{note\-On}!SeaboardSynth@{Seaboard\-Synth}}
+\subsubsection[{note\-On}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Synth\-::note\-On (
+\begin{DoxyParamCaption}
+\item[{const int}]{midi\-Channel, }
+\item[{const int}]{midi\-Note\-Number, }
+\item[{const float}]{velocity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_seaboard_synth_a57c45f23af1233a27ab4bbdd3ff0f6be}
+Checks whether a given note is still ringing, and stops it if it is. Then calls the start\-Voice() function for a given \hyperlink{struct_seaboard_voice}{Seaboard\-Voice} \hypertarget{struct_seaboard_synth_ac76b6b1e3e71db714d80c65ae28f4515}{\index{Seaboard\-Synth@{Seaboard\-Synth}!stop\-Voice@{stop\-Voice}}
+\index{stop\-Voice@{stop\-Voice}!SeaboardSynth@{Seaboard\-Synth}}
+\subsubsection[{stop\-Voice}]{\setlength{\rightskip}{0pt plus 5cm}void Seaboard\-Synth\-::stop\-Voice (
+\begin{DoxyParamCaption}
+\item[{Synthesiser\-Voice $\ast$}]{voice, }
+\item[{const bool}]{allow\-Tail\-Off}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_seaboard_synth_ac76b6b1e3e71db714d80c65ae28f4515}
+Calls the stop\-Note() function for a given \hyperlink{struct_seaboard_voice}{Seaboard\-Voice} 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Seaboard\-Player.\-cpp\end{DoxyCompactItemize}
