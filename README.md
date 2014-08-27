@@ -1,4 +1,11 @@
-MHDBerlin
+Music Hack Day Berlin
 =========
 
-Includes the JUCE library along with the Seaboard library and some simple examples of how to implement visual and audio response from Seaboard input.
+
+[Music Hack Day Berlin](http://musichackday.de/) official website
+
+[ROLI Music Hack Day Intro Page](https://www.roli.com/music-hack-day/)
+
+[Max/MSP](http://cycling74.com/products/max/) – free 30 day trial download
+
+[JUCE (C++)](http://www.juce.com/) - creative applications framework
