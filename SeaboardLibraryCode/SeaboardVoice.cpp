@@ -46,7 +46,7 @@ struct SeaboardVoice  : public SynthesiserVoice
 	
 	/** Called when Midi Note On messages are received. Subclasses should overwrite this and implement the desired Note On behaviour. */
     void startNote (int midiNoteNumber, float velocity,
-                    SynthesiserSound*, int /*currentPitchWheelPosition*/) override
+                    SynthesiserSound* sound, int currentPitchWheelPosition) override
     {
 		
     }
@@ -65,7 +65,7 @@ struct SeaboardVoice  : public SynthesiserVoice
 	{
 	}
 	/** Called when Midi Control Change messages are received. Subclasses should overwrite this and implement the desired Control Change behaviour. */
-    void controllerMoved (int /*controllerNumber*/, int /*newValue*/) override
+    void controllerMoved (int controllerNumber, int newValue) override
     {
     }
 	

@@ -108,16 +108,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>assignToChannel</b> (
 <tr class="memitem:a19ebdb5c571e624bdd42b3492976ef4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19ebdb5c571e624bdd42b3492976ef4b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentChannel</b> ()</td></tr>
 <tr class="separator:a19ebdb5c571e624bdd42b3492976ef4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a636f6b832a2caf65888a33012f4d0e80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_seaboard_voice.html#a636f6b832a2caf65888a33012f4d0e80">startNote</a> (int midiNoteNumber, float velocity, SynthesiserSound *, int) override</td></tr>
-<tr class="separator:a636f6b832a2caf65888a33012f4d0e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37fe69fe90f5c6f5f94e5e1fd6eadca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_seaboard_voice.html#ac37fe69fe90f5c6f5f94e5e1fd6eadca">startNote</a> (int midiNoteNumber, float velocity, SynthesiserSound *sound, int currentPitchWheelPosition) override</td></tr>
+<tr class="separator:ac37fe69fe90f5c6f5f94e5e1fd6eadca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f939f503e0cd2804a05c6f5c24cf80f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_seaboard_voice.html#a5f939f503e0cd2804a05c6f5c24cf80f">stopNote</a> (bool allowTailOff) override</td></tr>
 <tr class="separator:a5f939f503e0cd2804a05c6f5c24cf80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2ad0ecedab846f4114bd36759587a31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_seaboard_voice.html#ab2ad0ecedab846f4114bd36759587a31">pitchWheelMoved</a> (int bend) override</td></tr>
 <tr class="separator:ab2ad0ecedab846f4114bd36759587a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2155c54e1ec50cc644d0f9d7f35a2a45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_seaboard_voice.html#a2155c54e1ec50cc644d0f9d7f35a2a45">aftertouchChanged</a> (int aftertouch) override</td></tr>
 <tr class="separator:a2155c54e1ec50cc644d0f9d7f35a2a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a315bbe67d968e1cbd053623a7b1cda7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_seaboard_voice.html#a315bbe67d968e1cbd053623a7b1cda7a">controllerMoved</a> (int, int) override</td></tr>
-<tr class="separator:a315bbe67d968e1cbd053623a7b1cda7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d47adb23ed8eacc4917264e35355c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_seaboard_voice.html#a06d47adb23ed8eacc4917264e35355c8">controllerMoved</a> (int controllerNumber, int newValue) override</td></tr>
+<tr class="separator:a06d47adb23ed8eacc4917264e35355c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2398839d0cffc137a2512669b9f0938f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2398839d0cffc137a2512669b9f0938f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>renderNextBlock</b> (AudioSampleBuffer &amp;outputBuffer, int startSample, int numSamples) override</td></tr>
 <tr class="separator:a2398839d0cffc137a2512669b9f0938f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,7 +150,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>renderNextBlock</b> (
 
 </div>
 </div>
-<a class="anchor" id="a315bbe67d968e1cbd053623a7b1cda7a"></a>
+<a class="anchor" id="a06d47adb23ed8eacc4917264e35355c8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -161,13 +161,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>renderNextBlock</b> (
           <td class="memname">void SeaboardVoice::controllerMoved </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>controllerNumber</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>newValue</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -210,7 +210,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>renderNextBlock</b> (
 
 </div>
 </div>
-<a class="anchor" id="a636f6b832a2caf65888a33012f4d0e80"></a>
+<a class="anchor" id="ac37fe69fe90f5c6f5f94e5e1fd6eadca"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -233,13 +233,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>renderNextBlock</b> (
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">SynthesiserSound *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>sound</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>currentPitchWheelPosition</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -288,7 +288,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>renderNextBlock</b> (
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 27 2014 11:35:01 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 27 2014 15:25:41 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

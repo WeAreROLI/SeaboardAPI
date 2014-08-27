@@ -43,11 +43,9 @@ public:
 	void removeListener(Listener *listener);
 	
 private:
-	/**
-	 This function parses an incoming midi message from the seaboard and passes it to all of its listeners.
-	 */
+	/** This function parses an incoming midi message from the seaboard and passes it to all of its listeners.*/
 	void handleIncomingMidiMessage(MidiInput* source, const MidiMessage& message);
-
+	/** Search through the available Midi input devices for one named Seaboard. If it is found, open it and start it. If not, output a warning that it couldn't be found.*/
 	void findSeaboard();
 
 	/**A list of Seaboard::Listener objects that receive midi data from this Seaboard object.*/

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['controllermoved',['controllerMoved',['../struct_seaboard_voice.html#a315bbe67d968e1cbd053623a7b1cda7a',1,'SeaboardVoice']]]
+  ['controllermoved',['controllerMoved',['../struct_seaboard_voice.html#a06d47adb23ed8eacc4917264e35355c8',1,'SeaboardVoice']]]
 ];

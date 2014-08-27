@@ -151,7 +151,7 @@ struct SynthAudioSource  : public AudioSource
                                           ));
     }
 	
-    void prepareToPlay (int /*samplesPerBlockExpected*/, double sampleRate) override
+    void prepareToPlay (int samplesPerBlockExpected, double sampleRate) override
     {
         midiCollector.reset (sampleRate);
 
