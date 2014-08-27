@@ -5,14 +5,14 @@
               jucerVersion="3.1.0">
   <MAINGROUP id="FAXyTw" name="SeaboardSimpleSynth">
     <GROUP id="{A736765E-8B15-DF13-56E2-DC90F6F9E2E6}" name="SeaboardLibraryCode">
-      <FILE id="SxLiyd" name="BinaryData.cpp" compile="1" resource="0" file="SeaboardLibraryCode/BinaryData.cpp"/>
-      <FILE id="edua3F" name="BinaryData.h" compile="0" resource="0" file="SeaboardLibraryCode/BinaryData.h"/>
-      <FILE id="TvFMZf" name="Seaboard.cpp" compile="1" resource="0" file="SeaboardLibraryCode/Seaboard.cpp"/>
-      <FILE id="KUi4Tg" name="Seaboard.h" compile="0" resource="0" file="SeaboardLibraryCode/Seaboard.h"/>
-      <FILE id="I3kZGU" name="SeaboardPlayer.cpp" compile="1" resource="0"
-            file="SeaboardLibraryCode/SeaboardPlayer.cpp"/>
-      <FILE id="sP6qWA" name="SeaboardVoice.cpp" compile="1" resource="0"
-            file="SeaboardLibraryCode/SeaboardVoice.cpp"/>
+      <FILE id="l4F6Wy" name="BinaryData.cpp" compile="1" resource="0" file="../SeaboardLibraryCode/BinaryData.cpp"/>
+      <FILE id="r2rev0" name="BinaryData.h" compile="0" resource="0" file="../SeaboardLibraryCode/BinaryData.h"/>
+      <FILE id="h7xTME" name="Seaboard.cpp" compile="1" resource="0" file="../SeaboardLibraryCode/Seaboard.cpp"/>
+      <FILE id="t7XCIR" name="Seaboard.h" compile="0" resource="0" file="../SeaboardLibraryCode/Seaboard.h"/>
+      <FILE id="aPNuHE" name="SeaboardPlayer.cpp" compile="1" resource="0"
+            file="../SeaboardLibraryCode/SeaboardPlayer.cpp"/>
+      <FILE id="xw6YUa" name="SeaboardVoice.cpp" compile="1" resource="0"
+            file="../SeaboardLibraryCode/SeaboardVoice.cpp"/>
     </GROUP>
     <GROUP id="{023BAF37-CDC5-1675-1ACF-939DBA96E33C}" name="Source">
       <FILE id="HClE9q" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>

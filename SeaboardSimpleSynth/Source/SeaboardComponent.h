@@ -11,7 +11,7 @@
 #ifndef MAINCOMPONENT_H_INCLUDED
 #define MAINCOMPONENT_H_INCLUDED
 
-#include "../JuceLibraryCode/JuceHeader.h"
+#include "JuceHeader.h"
 #include "SineWaveVoice.cpp"
 
 /*

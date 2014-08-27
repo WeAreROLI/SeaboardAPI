@@ -9,7 +9,7 @@
 */
 
 #include "JuceHeader.h"
-#include "../SeaboardLibraryCode/SeaboardPlayer.cpp"
+#include "../../SeaboardLibraryCode/SeaboardPlayer.cpp"
 
 //==============================================================================
 /*
