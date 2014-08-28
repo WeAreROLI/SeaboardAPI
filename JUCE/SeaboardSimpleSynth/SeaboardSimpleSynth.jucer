@@ -48,6 +48,29 @@
         <MODULEPATH id="juce_audio_processors" path="../Library/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
+    <VS2013 targetFolder="Builds/VisualStudio2013">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="SeaboardSimpleSynth"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="2" targetName="SeaboardSimpleSynth"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video" path="../Library/modules"/>
+        <MODULEPATH id="juce_opengl" path="../Library/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../Library/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../Library/modules"/>
+        <MODULEPATH id="juce_graphics" path="../Library/modules"/>
+        <MODULEPATH id="juce_events" path="../Library/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../Library/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../Library/modules"/>
+        <MODULEPATH id="juce_core" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../Library/modules"/>
+      </MODULEPATHS>
+    </VS2013>
   </EXPORTFORMATS>
   <MODULES>
     <MODULES id="juce_audio_basics" showAllCode="0" useLocalCopy="0"/>
