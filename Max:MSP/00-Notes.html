@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Max/MSP Seaboard Tutorial Notes</title>
+
+</head>
+<body>
+<h3>Max/MSP Seaboard Tutorial Notes</h3>
+
+<h4>Welcome!</h4>
+
+<p>This folder contains seven <a href="www.cycling74.com/products/max/">Max/MSP</a> patches that explain how  Seaboard MIDI data works, how it can be parsed in Max/MSP and how to use it to control a synthesiser or external application. This includes demonstrations of the Seaboard's unqiue polyphonic Pitch Bend and Aftertouch, and how to output Seaboard data to external applications with using the <a href="https://en.wikipedia.org/wiki/Open_Sound_Control">Open Sound Control</a> (OSC) protocol.</p>
+
+<p>Before opening a patch, please power up and connect your Seaboard using the power switch on the Back Panel (the Seaboard takes around 15 seconds to launch; the SoundDial will settle once launch is completed). Each patch opens in Presentation Mode, and is fully interactive – just start playing the Seaboard. To start hacking, enter Edit Mode to reveal the patching structure.</p>
+
+<p>Each patch is annotated with comments, so if you are already familiar with Max then they may be sufficient to get you hacking. The comments document how and why each object was used, and will help you create your own Seaboard patches. If you're new to Max, the below articles should be helpful. Happy hacking!</p>
+
+<h4>Table of Contents</h4>
+
+<p>Tutorial 1 - <a href="">Seaboard MIDI Data</a></p>
+
+<p>Tutorial 2 - <a href="">Parsing Seaboard MIDI Data</a></p>
+
+<p>Tutorial 3 - <a href="">Mono Sine Synth</a></p>
+
+<p>Tutorial 4 - <a href="">Poly Sine Synth</a></p>
+
+<p>Tutorial 5 - <a href="">Mono FM Synth</a></p>
+
+<p>Tutorial 6 - <a href="">Poly FM Synth</a></p>
+
+<p>Tutorial 7- <a href="">Open Sound Control (OSC) Output</a></p>
+
+<h4>Tutorial 1: Seaboard MIDI Data</h4>
+
+<p>This patch shows how to select the Seaboard as a MIDI input device and how to input MIDI data from it into a Max patch using the ‘midiparse' object. This object will allow to input MIDI pitch and velocity data, polyphonic Aftertouch and the MIDI Channel being used.</p>
+
+<h1><img src="img/Tutorial_1a.png" alt="Tutorial 1a" /></h1>
+
+<p>Instead of using the  ‘midiparse’ object for Pitch Bend, the ‘xbendin’ object is used to be able to easily input 14 bit Pitch Bend from the Seaboard.</p>
+
+<h1><img src="img/Tutorial_1b.png" alt="Tutorial 1b" /></h1>
+
+<h4>Tutorial 2: Parsing Seaboard MIDI Data</h4>
+
+<p>This patch shows how the data from the Seaboard can be split into individual channels for each note played. By playing multiple notes it can be seen that Aftertouch and Pitch Bend are polyphonic and apply individually for each note. To achieve this you can see that each note played is on a different MIDI Channel, using up to 10 channels.</p>
+
+<h4>Tutorial 3: Mono Sine Synth</h4>
+
+<p>This patch shows how a simple monophonic sine synthesiser being can be controlled by the Seaboard. To avoid any clicks when a note is released, a ‘line~’ object is added to ramp down the velocity to 0 over 20ms. In a more advanced synth patch, this could be replaced with an amplitude envelope that would give more control over the amplitude of a note.</p>
+
+<h1><img src="img/Tutorial_3.png" alt="Tutorial 3" /></h1>
+
+<p>Continuous Aftertouch is applied to the amplitude of each note, varying the level of a note played after the initial velocity value. Pitch Bend is then applied to vary the frequency of the Oscillator by ± 1 Octave. This is achieved by compressing the 14-bit Pitch Bend from -8192 to +8191 to -1 to +1. The formula:</p>
+
+<p>base frequency x 2^(Pitch Bend)</p>
+
+<p>is used to double the base frequency for a +1 octave Pitch Bend and half the frequency for a -1 octave Pitch Bend.</p>
+
+<h4>Tutorial 4: Poly Sine Synth</h4>
+
+<p>The simple sine synth created in the previous patch is now encapsulated into a ‘poly~’ object to allow multiple instance of the patch to be used simultaneously. As the Seaboard uses up to 10 MIDI Channels, 10 voices of the original sine synth are created.</p>
+
+<h1><img src="img/Tutorial_4.png" alt="Tutorial 4" /></h1>
+
+<p>To create polyphonic Aftertouch and Pitch Bend, each voice needs to input note data, Aftertouch and Pitch Bend for a specific MIDI Channel. For instance, Pitch Bend, Aftertouch and note data on MIDI Channel 1 will only go to the first voice of the patch. To achieve this, the message ‘target $1’ is sent to the first inlet of the ‘poly~’ object, where $1 will be replaced by the current MIDI Channel.</p>
+
+<h4>Tutorial 5: Mono FM Synth</h4>
+
+<p>This patch shows how a simple monophonic Frequency Modulation (FM) synthesiser can be controlled by the Seaboard.</p>
+
+<h1><img src="img/Tutorial_5.png" alt="Tutorial 5" /></h1>
+
+<p>As before, Pitch Bend is set to modulate the pitch of the oscillator by ± 1 octave. Aftertouch however is no longer assigned to the amplitude of the note played, but instead controls the modulation depth of the modulating frequency. This changes the timbre of the sound created, and works well at creating a pseudo frequency cut-off, where adding more pressure opens up the filter further.</p>
+
+<p>There is also control over the harmonic ratio, or the scale between the carrier and modulation frequency. Having the value of the scale as an integer value will create a consonant sound, while having the value in-between integers will create more of a dissonant sound.</p>
+
+<h4>Tutorial 6: Poly FM Synth</h4>
+
+<p>The FM patch created in the previous tutorial is now encapsulated into a ‘poly~’ object similar to Tutorial 4, creating a 10 voice Polyphonic FM Synthesiser, with full polyphonic Aftertouch and Pitch Bend from the Seaboard.</p>
+
+<p>The difference with this patch and Tutorial 4 is that there is an extra parameter added that controls the Scale between the Carrier and Modulating frequency. As this is a parameter that is local to all voices, every time this value changes, a message of ‘target 0’ needs to be sent to the left inlet of the poly~ object to update all voices. If this is not there then, it will only update the current instance being used.</p>
+
+<h1><img src="img/Tutorial_6.png" alt="Tutorial 6" /></h1>
+
+<p>This is something to consider when designing your own polyphonic synths, as this is needed if you want to have control of parameters over all instances, such as envelopes or oscillator types.</p>
+
+<h4>Tutorial 7: Open Sound Control (OSC) Output</h4>
+
+<p>This patch shows how the ‘udpsend’ object can be used to output any data from Max to external applications with the use of Open Sound Control (OSC). When using OSC, the IP address of the receiving application or device needs to be set, as well as the port it is going to be send to. This can be manually updated in this patch using the text boxes provided.</p>
+
+<h1><img src="img/Tutorial_7.png" alt="Tutorial 7" /></h1>
+</body>
+</html>
