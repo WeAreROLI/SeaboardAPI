@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 911.0, 638.0 ],
+		"rect" : [ 265.0, 112.0, 954.0, 657.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -32,14 +32,14 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
-					"id" : "obj-6",
+					"id" : "obj-4",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 378.0, 692.0, 150.0, 20.0 ],
+					"patching_rect" : [ 15.0, 262.0, 260.550049, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 361.0, 203.0, 150.0, 20.0 ],
-					"text" : "Toggle Sound on and off"
+					"presentation_rect" : [ 15.0, 270.0, 260.0, 20.0 ],
+					"text" : "4. Tired of Mono? Let's go Poly in Tutorial 4"
 				}
 
 			}
@@ -48,16 +48,31 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
-					"id" : "obj-3",
-					"linecount" : 8,
+					"id" : "obj-1",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 46.0, 23.0, 215.0, 114.0 ],
+					"patching_rect" : [ 419.150146, 289.0, 62.699951, 20.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 7,
-					"presentation_rect" : [ 17.0, 27.110001, 241.0, 100.0 ],
-					"text" : "Mono Sine Synth\n\nThis patch shows how the MIDI data from the Seaboard can be used to create a mono sine synth, with +/- 1 octave pitch bend and aftertouch or Channel Pressure controlling the amplitude of a note"
+					"presentation_rect" : [ 119.75, 195.0, 60.25, 20.0 ],
+					"text" : "Velocity"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 14.0,
+					"frgb" : 0.0,
+					"id" : "obj-9",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 39.449951, 26.0, 260.550049, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 15.0, 15.0, 222.0, 22.0 ],
+					"text" : "Tutorial 3: Mono Sine Synth"
 				}
 
 			}
@@ -67,12 +82,12 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-76",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 83.5, 527.0, 150.0, 47.0 ],
-					"text" : "Aftertouch value also sent to control the amplitude after the inital velocity"
+					"patching_rect" : [ 30.650146, 470.0, 167.0, 33.0 ],
+					"text" : "Aftertouch controls amplitude after Note On Velocity"
 				}
 
 			}
@@ -86,8 +101,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 541.199951, 462.0, 199.0, 74.0 ],
-					"text" : "Convert max and min Pitch bend value into +/- 1 Octave.\n\nBase Frequency*2^x\nwith (-1<x<1)"
+					"patching_rect" : [ 511.850098, 405.0, 199.0, 74.0 ],
+					"text" : "Convert max and min Pitch bend value into ± 1 Octave.\n\nBase Frequency*2^x\nwith (-1<x<1)"
 				}
 
 			}
@@ -100,7 +115,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 770.0, 394.0, 32.5, 20.0 ],
+					"patching_rect" : [ 740.650146, 337.0, 32.5, 20.0 ],
 					"text" : "t b i"
 				}
 
@@ -114,7 +129,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 491.0, 492.0, 47.0, 20.0 ],
+					"patching_rect" : [ 461.650146, 435.0, 47.0, 20.0 ],
 					"text" : "/ 8192."
 				}
 
@@ -128,7 +143,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 438.0, 492.0, 47.0, 20.0 ],
+					"patching_rect" : [ 408.650146, 435.0, 47.0, 20.0 ],
 					"text" : "/ 8191."
 				}
 
@@ -142,7 +157,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 438.0, 462.0, 72.0, 20.0 ],
+					"patching_rect" : [ 408.650146, 405.0, 72.0, 20.0 ],
 					"text" : "split 0 8192"
 				}
 
@@ -156,7 +171,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 326.0, 527.0, 130.0, 20.0 ],
+					"patching_rect" : [ 296.650146, 470.0, 130.0, 20.0 ],
 					"text" : "expr $f1* (pow (2\\,$f2))"
 				}
 
@@ -167,9 +182,9 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 326.0, 667.0, 45.0, 45.0 ],
+					"patching_rect" : [ 296.650146, 588.0, 45.0, 45.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 307.0, 178.0, 45.0, 45.0 ]
+					"presentation_rect" : [ 255.0, 78.889999, 45.0, 45.0 ]
 				}
 
 			}
@@ -179,12 +194,11 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-54",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 83.5, 485.5, 149.0, 33.0 ],
-					"text" : "Release time of 20ms set to avoid clicks"
+					"patching_rect" : [ 30.650146, 428.5, 153.0, 20.0 ],
+					"text" : "20ms Release Time"
 				}
 
 			}
@@ -194,11 +208,11 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-51",
-					"linecount" : 4,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 83.5, 422.0, 150.0, 60.0 ],
+					"patching_rect" : [ 30.650146, 365.0, 179.0, 47.0 ],
 					"text" : "Velocity inputed to allow for release of note when there is a note off message"
 				}
 
@@ -212,7 +226,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 236.5, 435.0, 37.0, 20.0 ],
+					"patching_rect" : [ 207.150146, 378.0, 37.0, 20.0 ],
 					"text" : "t i 20"
 				}
 
@@ -226,7 +240,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "bang" ],
-					"patching_rect" : [ 236.5, 462.0, 50.0, 20.0 ],
+					"patching_rect" : [ 207.150146, 405.0, 50.0, 20.0 ],
 					"text" : "line~ 0."
 				}
 
@@ -240,7 +254,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 236.5, 492.0, 48.0, 20.0 ],
+					"patching_rect" : [ 207.150146, 435.0, 48.0, 20.0 ],
 					"text" : "/~ 127."
 				}
 
@@ -254,7 +268,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 306.0, 401.0, 39.0, 20.0 ],
+					"patching_rect" : [ 276.650146, 344.0, 39.0, 20.0 ],
 					"text" : "swap"
 				}
 
@@ -268,7 +282,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 326.0, 624.0, 32.5, 20.0 ],
+					"patching_rect" : [ 296.650146, 545.0, 32.5, 20.0 ],
 					"text" : "*~"
 				}
 
@@ -282,7 +296,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 326.0, 455.0, 34.0, 20.0 ],
+					"patching_rect" : [ 296.650146, 398.0, 34.0, 20.0 ],
 					"text" : "mtof"
 				}
 
@@ -296,7 +310,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 326.0, 564.0, 45.0, 20.0 ],
+					"patching_rect" : [ 296.650146, 507.0, 45.0, 20.0 ],
 					"text" : "cycle~"
 				}
 
@@ -310,10 +324,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 808.0, 346.0, 82.199951, 20.0 ],
+					"patching_rect" : [ 778.650146, 289.0, 82.199951, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 737.0, 118.0, 82.199951, 20.0 ],
-					"text" : "MIDI Channel"
+					"presentation_rect" : [ 192.800049, 195.0, 62.199951, 20.0 ],
+					"text" : "Channel"
 				}
 
 			}
@@ -326,9 +340,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 695.0, 346.0, 75.0, 20.0 ],
+					"patching_rect" : [ 665.650146, 289.0, 75.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 624.0, 118.0, 75.0, 20.0 ],
+					"presentation_rect" : [ 345.0, 195.0, 75.0, 20.0 ],
 					"text" : "Pitch Bend"
 				}
 
@@ -339,31 +353,13 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-33",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 541.199951, 346.0, 105.0, 33.0 ],
+					"patching_rect" : [ 540.650146, 289.0, 66.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 470.199951, 118.0, 105.0, 33.0 ],
-					"text" : "Aftertouch/ Channel Pressure"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-31",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 448.5, 346.0, 50.5, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 377.5, 118.0, 50.5, 20.0 ],
-					"text" : "Velocity"
+					"presentation_rect" : [ 272.199951, 195.0, 64.0, 20.0 ],
+					"text" : "Aftertouch"
 				}
 
 			}
@@ -376,10 +372,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 364.0, 346.0, 40.0, 20.0 ],
+					"patching_rect" : [ 334.650146, 289.0, 40.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 293.0, 118.0, 40.0, 20.0 ],
-					"text" : "Pitch"
+					"presentation_rect" : [ 53.800049, 195.0, 40.0, 20.0 ],
+					"text" : "Note"
 				}
 
 			}
@@ -393,9 +389,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 890.199951, 346.0, 38.0, 20.0 ],
+					"patching_rect" : [ 860.850098, 289.0, 38.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 819.199951, 118.0, 38.0, 20.0 ],
+					"presentation_rect" : [ 192.800049, 225.0, 38.0, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -410,9 +406,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 770.0, 346.0, 38.0, 20.0 ],
+					"patching_rect" : [ 740.650146, 289.0, 38.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 699.0, 118.0, 38.0, 20.0 ],
+					"presentation_rect" : [ 345.0, 225.0, 38.0, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -427,9 +423,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 649.699951, 346.0, 38.0, 20.0 ],
+					"patching_rect" : [ 620.350098, 289.0, 38.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 578.699951, 118.0, 38.0, 20.0 ],
+					"presentation_rect" : [ 272.199951, 225.0, 38.0, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -444,9 +440,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 499.0, 346.0, 38.0, 20.0 ],
+					"patching_rect" : [ 496.850098, 289.0, 38.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 428.0, 118.0, 38.0, 20.0 ],
+					"presentation_rect" : [ 119.75, 225.0, 38.0, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -461,9 +457,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 404.0, 346.0, 38.0, 20.0 ],
+					"patching_rect" : [ 374.650146, 289.0, 38.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 333.0, 118.0, 38.0, 20.0 ],
+					"presentation_rect" : [ 53.800049, 225.0, 38.0, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -477,23 +473,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 438.0, 304.0, 61.0, 20.0 ],
+					"patching_rect" : [ 408.650146, 247.0, 61.0, 20.0 ],
 					"text" : "unpack i i"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-86",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 509.699951, 213.0, 167.0, 60.0 ],
-					"text" : "Separation of MIDI data now encapsulated into a single object. \ncmd+double click to open"
 				}
 
 			}
@@ -511,7 +492,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -741,7 +722,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 754.5, 316.5, 50.0, 18.0 ],
-									"text" : "77"
+									"text" : "19"
 								}
 
 							}
@@ -835,7 +816,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 131.199951, 235.5, 59.0, 18.0 ],
-									"text" : "16383"
+									"text" : "8191"
 								}
 
 							}
@@ -1464,7 +1445,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 688.5, 240.0, 76.0, 20.0 ],
+					"patching_rect" : [ 660.350098, 195.0, 76.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1486,31 +1467,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-4",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 499.699951, 108.110001, 150.0, 33.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 409.699951, 34.110001, 150.0, 33.0 ],
-					"text" : "Select the Seaboard as a MIDI input"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"hidden" : 1,
 					"id" : "obj-28",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 649.699951, 29.0, 60.0, 20.0 ],
+					"patching_rect" : [ 621.550049, 29.0, 60.0, 20.0 ],
 					"text" : "loadbang"
 				}
 
@@ -1526,9 +1489,9 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 649.699951, 121.110001, 100.0, 20.0 ],
+					"patching_rect" : [ 621.550049, 121.110001, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 572.699951, 47.110001, 100.0, 20.0 ]
+					"presentation_rect" : [ 255.0, 45.0, 100.0, 20.0 ]
 				}
 
 			}
@@ -1542,7 +1505,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 649.699951, 63.0, 32.5, 18.0 ],
+					"patching_rect" : [ 621.550049, 63.0, 32.5, 18.0 ],
 					"text" : "1"
 				}
 
@@ -1557,7 +1520,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 649.699951, 88.110001, 52.0, 20.0 ],
+					"patching_rect" : [ 621.550049, 88.110001, 52.0, 20.0 ],
 					"text" : "midiinfo"
 				}
 
@@ -1572,7 +1535,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 688.5, 152.0, 42.0, 20.0 ],
+					"patching_rect" : [ 660.350098, 152.0, 42.0, 20.0 ],
 					"text" : "midiin"
 				}
 
@@ -1583,7 +1546,25 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 492.199951, 21.0, 266.0, 151.0 ]
+					"patching_rect" : [ 600.0, 15.0, 151.850098, 210.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-3",
+					"linecount" : 8,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 39.449951, 88.110001, 260.550049, 114.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 8,
+					"presentation_rect" : [ 15.0, 45.0, 260.0, 114.0 ],
+					"text" : "1. Select 'Seaboard' as MIDI input device:\n\n2. Toggle the Audio Output to On: \n\n\n\n\n3. Start playing to hear the Mono Sine Synth"
 				}
 
 			}
@@ -1593,7 +1574,7 @@
 					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
-					"midpoints" : [ 659.199951, 121.890015, 659.199951, 121.890015 ],
+					"midpoints" : [ 631.050049, 121.890015, 631.050049, 121.890015 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -1612,7 +1593,7 @@
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
-					"midpoints" : [ 699.699951, 147.554993, 698.0, 147.554993 ],
+					"midpoints" : [ 671.550049, 147.554993, 669.850098, 147.554993 ],
 					"source" : [ "obj-16", 1 ]
 				}
 
@@ -1658,7 +1639,7 @@
 					"destination" : [ "obj-46", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 659.199951, 387.0, 246.0, 387.0 ],
+					"midpoints" : [ 629.850098, 323.0, 216.650146, 323.0 ],
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -1695,7 +1676,7 @@
 					"destination" : [ "obj-55", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 335.5, 655.5, 361.5, 655.5 ],
+					"midpoints" : [ 306.150146, 576.5, 332.150146, 576.5 ],
 					"source" : [ "obj-44", 0 ]
 				}
 
@@ -1723,7 +1704,7 @@
 					"destination" : [ "obj-46", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 315.5, 427.0, 246.0, 427.0 ],
+					"midpoints" : [ 286.150146, 370.0, 216.650146, 370.0 ],
 					"source" : [ "obj-45", 0 ]
 				}
 
@@ -1760,7 +1741,7 @@
 					"destination" : [ "obj-44", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 246.0, 611.0, 349.0, 611.0 ],
+					"midpoints" : [ 216.650146, 531.0, 319.650146, 531.0 ],
 					"source" : [ "obj-48", 0 ]
 				}
 
@@ -1797,7 +1778,7 @@
 					"destination" : [ "obj-59", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 447.5, 519.0, 446.5, 519.0 ],
+					"midpoints" : [ 418.150146, 462.0, 417.150146, 462.0 ],
 					"source" : [ "obj-65", 0 ]
 				}
 
@@ -1807,7 +1788,7 @@
 					"destination" : [ "obj-59", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 500.5, 519.0, 446.5, 519.0 ],
+					"midpoints" : [ 471.150146, 462.0, 417.150146, 462.0 ],
 					"source" : [ "obj-66", 0 ]
 				}
 
@@ -1817,7 +1798,7 @@
 					"destination" : [ "obj-59", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 779.5, 439.0, 369.0, 439.0, 369.0, 514.0, 335.5, 514.0 ],
+					"midpoints" : [ 750.150146, 382.0, 339.650146, 382.0, 339.650146, 457.0, 306.150146, 457.0 ],
 					"source" : [ "obj-72", 0 ]
 				}
 
@@ -1827,7 +1808,7 @@
 					"destination" : [ "obj-64", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 793.0, 452.0, 447.5, 452.0 ],
+					"midpoints" : [ 763.650146, 395.0, 418.150146, 395.0 ],
 					"source" : [ "obj-72", 1 ]
 				}
 
@@ -1837,7 +1818,7 @@
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 698.0, 289.0, 447.5, 289.0 ],
+					"midpoints" : [ 669.850098, 240.0, 418.150146, 240.0 ],
 					"source" : [ "obj-83", 0 ]
 				}
 
@@ -1847,7 +1828,7 @@
 					"destination" : [ "obj-25", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 736.0, 336.0, 779.5, 336.0 ],
+					"midpoints" : [ 707.850098, 234.0, 750.150146, 234.0 ],
 					"source" : [ "obj-83", 2 ]
 				}
 
@@ -1857,7 +1838,7 @@
 					"destination" : [ "obj-26", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 717.0, 327.0, 659.199951, 327.0 ],
+					"midpoints" : [ 688.850098, 249.0, 629.850098, 249.0 ],
 					"source" : [ "obj-83", 1 ]
 				}
 
@@ -1867,7 +1848,7 @@
 					"destination" : [ "obj-27", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 755.0, 302.5, 899.699951, 302.5 ],
+					"midpoints" : [ 726.850098, 230.5, 870.350098, 230.5 ],
 					"source" : [ "obj-83", 3 ]
 				}
 
@@ -1877,7 +1858,7 @@
 					"destination" : [ "obj-45", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 698.0, 288.0, 315.5, 288.0 ],
+					"midpoints" : [ 669.850098, 232.0, 286.150146, 232.0 ],
 					"source" : [ "obj-83", 0 ]
 				}
 

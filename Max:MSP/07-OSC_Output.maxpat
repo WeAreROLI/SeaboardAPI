@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 64.0, 47.0, 975.0, 638.0 ],
+		"rect" : [ 64.0, 47.0, 961.0, 435.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -32,16 +32,86 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
-					"id" : "obj-12",
-					"linecount" : 6,
+					"id" : "obj-14",
+					"linecount" : 7,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 23.5, 29.0, 270.0, 87.0 ],
+					"patching_rect" : [ 14.0, 329.0, 273.0, 100.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 6,
-					"presentation_rect" : [ 23.5, 29.0, 270.0, 87.0 ],
-					"text" : "Outputting Seaboard information via OSC\n\nIn this patch Note Data, Aftertouch and Pitch bend, per MIDI channel are outputted via OSC (Open Sound Control) so that the Seaboard can be used with other applications."
+					"presentation_linecount" : 5,
+					"presentation_rect" : [ 15.0, 300.0, 360.0, 74.0 ],
+					"text" : "4. That concludes our Max/MSP Seaboard Tutorials. If you have any feedback, we would love to hear it support@roli.com\n\n5. If you're a C++ Programmer, check out our JUCE Seaboard Tutorials at github.com/WeAreROLI"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-4",
+					"linecount" : 10,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 632.0, 242.0, 150.0, 141.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 5,
+					"presentation_rect" : [ 568.0, 242.5, 287.0, 74.0 ],
+					"text" : "MIDI Channel is appended to all OSC Messages, to make Polyphonic mapping easier.\n\nFor more about OSC, check out:\nhttps://en.wikipedia.org/wiki/Open_Sound_Control"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-1",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 185.0, 261.390015, 151.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 135.0, 210.0, 48.5, 20.0 ],
+					"text" : "Port"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 14.0,
+					"frgb" : 0.0,
+					"id" : "obj-9",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 34.5, 30.0, 255.0, 38.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 15.0, 15.0, 315.0, 22.0 ],
+					"text" : "Tutorial 7: Open Sound Control (OSC) Output"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-12",
+					"linecount" : 13,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 23.5, 29.0, 274.0, 181.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 10,
+					"presentation_rect" : [ 15.0, 45.0, 366.0, 141.0 ],
+					"text" : "1. Select 'Seaboard' as MIDI input device:\n\n2. Set the IP and Port Number (or leave the default settings)\n\n3. Play the Seaboard and watch as the OSC data is transmitted and received by Max.\n\nOSC is flexible enough that if you wanted to, you could send Seaboard data through Max to Processing to visualise it, or to a Web Browser using Node.js (try `npm search open sound control`)."
 				}
 
 			}
@@ -56,7 +126,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 766.0, 427.0, 75.5, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 728.0, 162.5, 70.0, 20.0 ],
+					"presentation_rect" : [ 448.75, 210.0, 70.0, 20.0 ],
 					"text" : "Pitch Bend"
 				}
 
@@ -67,15 +137,13 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-5",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 580.5, 427.0, 114.0, 33.0 ],
+					"patching_rect" : [ 580.5, 427.0, 114.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 516.5, 162.5, 150.0, 33.0 ],
-					"text" : "Aftertouch or Channel Pressure"
+					"presentation_rect" : [ 330.0, 210.0, 75.0, 20.0 ],
+					"text" : "Aftertouch"
 				}
 
 			}
@@ -90,8 +158,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 394.5, 427.0, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 341.0, 162.5, 150.0, 20.0 ],
-					"text" : "Note Pitch and Velocity"
+					"presentation_rect" : [ 195.0, 210.0, 90.0, 20.0 ],
+					"text" : "Note & Velocity"
 				}
 
 			}
@@ -115,15 +183,13 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-56",
-					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 137.0, 306.5, 150.0, 60.0 ],
+					"patching_rect" : [ 137.0, 306.5, 151.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 4,
-					"presentation_rect" : [ 101.0, 162.5, 154.0, 60.0 ],
-					"text" : "Please type what host IP address and port number you wish to use and press enter"
+					"presentation_rect" : [ 48.5, 210.0, 26.0, 20.0 ],
+					"text" : "IP"
 				}
 
 			}
@@ -170,7 +236,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 232.0, 368.0, 104.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 179.0, 133.0, 104.0, 23.0 ],
+					"presentation_rect" : [ 135.0, 240.0, 48.5, 23.0 ],
 					"text" : "8000"
 				}
 
@@ -218,7 +284,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 128.0, 368.0, 104.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 61.0, 133.0, 104.0, 23.0 ],
+					"presentation_rect" : [ 48.5, 240.0, 75.0, 23.0 ],
 					"text" : "127.0.0.1"
 				}
 
@@ -248,8 +314,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 752.75, 405.0, 125.5, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 722.75, 138.0, 125.5, 18.0 ],
-					"text" : "/pitchBend -343 9"
+					"presentation_rect" : [ 450.0, 242.5, 103.75, 18.0 ],
+					"text" : "/pitchBend -1 9"
 				}
 
 			}
@@ -278,8 +344,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 560.5, 405.0, 125.5, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 516.5, 138.0, 125.5, 18.0 ],
-					"text" : "/afterTouch 39 9"
+					"presentation_rect" : [ 330.0, 242.5, 105.0, 18.0 ],
+					"text" : "/afterTouch 16 9"
 				}
 
 			}
@@ -322,8 +388,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 376.5, 405.0, 125.5, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 346.5, 138.0, 125.5, 18.0 ],
-					"text" : "/noteData 48 0 9"
+					"presentation_rect" : [ 195.0, 242.5, 120.0, 18.0 ],
+					"text" : "/noteData 38 0 9"
 				}
 
 			}
@@ -439,7 +505,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -669,7 +735,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 754.5, 316.5, 50.0, 18.0 ],
-									"text" : "39"
+									"text" : "16"
 								}
 
 							}
@@ -763,7 +829,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 131.199951, 235.5, 59.0, 18.0 ],
-									"text" : "7849"
+									"text" : "8191"
 								}
 
 							}
@@ -1414,24 +1480,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-4",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 499.699951, 108.110001, 150.0, 33.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 322.0, 65.110001, 150.0, 33.0 ],
-					"text" : "Select the Seaboard as a MIDI input"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"hidden" : 1,
 					"id" : "obj-28",
 					"maxclass" : "newobj",
@@ -1456,7 +1504,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 649.699951, 121.110001, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 485.0, 78.110001, 100.0, 20.0 ]
+					"presentation_rect" : [ 255.0, 45.0, 100.0, 20.0 ]
 				}
 
 			}
