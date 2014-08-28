@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1280.0, 638.0 ],
+		"rect" : [ 0.0, 44.0, 1193.0, 717.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,73 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-21",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 938.849976, 626.0, 151.0, 47.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 10.849976, 405.0, 438.0, 20.0 ],
+					"text" : "4. Now, let's dig a little deeper into the data in Tutorial 2..."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-20",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 148.099976, 621.0, 86.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 75.0, 348.0, 68.0, 20.0 ],
+					"text" : "Pitch Bend"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-19",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 546.25, 267.5, 67.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 274.0, 180.0, 50.0, 20.0 ],
+					"text" : "Velocity"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 14.0,
+					"frgb" : 0.0,
+					"id" : "obj-9",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 24.449951, 11.0, 142.0, 38.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 10.849976, 15.0, 222.0, 22.0 ],
+					"text" : "Tutorial 1: Seaboard MIDI Data"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -53,7 +120,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 148.099976, 592.0, 46.849976, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 369.5, 195.0, 46.849976, 20.0 ]
+					"presentation_rect" : [ 148.5, 348.0, 46.849976, 20.0 ]
 				}
 
 			}
@@ -69,24 +136,6 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 828.949951, 256.0, 150.0, 33.0 ],
 					"text" : "See how each new notes is a new MIDI channel."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-6",
-					"linecount" : 9,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 24.449951, 21.0, 285.0, 127.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 9,
-					"presentation_rect" : [ 30.0, 19.0, 294.0, 127.0 ],
-					"text" : "MONO MIDI INPUT\n\nPlease play one note at a time and see how;\n- Adding pressure to note will increase the Aftertouch value\n- Bending the note or using the ribbons changes the pitch bend value\n- Each new note you play will be on a different MIDI channel."
 				}
 
 			}
@@ -132,7 +181,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 546.25, 309.5, 50.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 688.0, 195.0, 50.0, 20.0 ],
+					"presentation_rect" : [ 274.0, 209.0, 50.0, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -150,7 +199,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 496.25, 309.5, 50.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 627.0, 195.0, 50.0, 20.0 ],
+					"presentation_rect" : [ 210.0, 209.0, 50.0, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -167,7 +216,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 794.449951, 229.5, 50.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 890.0, 195.0, 26.996094, 20.0 ],
+					"presentation_rect" : [ 338.0, 209.0, 50.0, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -183,8 +232,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 844.449951, 229.5, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 940.0, 195.0, 89.0, 20.0 ],
-					"text" : "MIDI Channel"
+					"presentation_rect" : [ 338.0, 180.0, 59.0, 20.0 ],
+					"text" : "Channel"
 				}
 
 			}
@@ -198,7 +247,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 758.0, 394.5, 50.0, 18.0 ],
-					"text" : "91"
+					"text" : "3"
 				}
 
 			}
@@ -211,10 +260,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 496.25, 267.5, 150.0, 20.0 ],
+					"patching_rect" : [ 496.25, 267.5, 41.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 627.0, 218.5, 150.0, 20.0 ],
-					"text" : "MIDI Pitch and Velocity"
+					"presentation_rect" : [ 210.0, 180.0, 41.0, 20.0 ],
+					"text" : "Note"
 				}
 
 			}
@@ -311,32 +360,14 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
-					"id" : "obj-39",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 132.199951, 621.0, 69.5, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 337.699951, 224.0, 69.5, 20.0 ],
-					"text" : "Pitch Bend"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-35",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 246.599976, 621.0, 119.0, 33.0 ],
+					"patching_rect" : [ 246.599976, 621.0, 68.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 422.0, 224.0, 119.0, 33.0 ],
-					"text" : "Aftertouch/ Channel Pressure"
+					"presentation_rect" : [ 75.0, 209.0, 69.0, 20.0 ],
+					"text" : "Aftertouch"
 				}
 
 			}
@@ -352,7 +383,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 246.599976, 592.0, 37.699951, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 422.0, 195.0, 37.699951, 20.0 ],
+					"presentation_rect" : [ 148.5, 209.0, 46.849976, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -368,7 +399,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 246.599976, 465.0, 37.699951, 121.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 422.0, 68.0, 30.699951, 113.5 ]
+					"presentation_rect" : [ 148.5, 236.5, 46.849976, 102.0 ]
 				}
 
 			}
@@ -440,7 +471,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 148.099976, 465.0, 37.699951, 121.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 369.5, 68.0, 30.699951, 113.5 ],
+					"presentation_rect" : [ 210.0, 348.0, 354.0, 20.0 ],
 					"size" : 25.0
 				}
 
@@ -456,7 +487,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 315.099976, 482.0, 588.0, 87.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 474.5, 68.0, 700.0, 102.0 ]
+					"presentation_rect" : [ 210.0, 236.5, 700.0, 102.0 ]
 				}
 
 			}
@@ -584,24 +615,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-4",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 499.699951, 108.110001, 150.0, 33.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 642.699951, 19.0, 150.0, 33.0 ],
-					"text" : "Select the Seaboard as a MIDI input"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-28",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -617,7 +630,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-16",
-					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2", ",", "Seaboard" ],
+					"items" : [ "AU DLS Synth 1", ",", "Seaboard", ",", "from Max 1", ",", "from Max 2" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -625,7 +638,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 649.699951, 121.110001, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 805.699951, 32.0, 100.0, 20.0 ]
+					"presentation_rect" : [ 240.0, 45.0, 100.0, 20.0 ]
 				}
 
 			}
@@ -688,6 +701,24 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 132.199951, 456.0, 793.25, 217.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-4",
+					"linecount" : 8,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 24.449951, 63.0, 446.0, 114.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 8,
+					"presentation_rect" : [ 10.849976, 45.0, 438.0, 114.0 ],
+					"text" : "1. Select 'Seaboard' as MIDI input device:\n\n2. Play the Seaboard to see the MIDI data (sound will be covered in Tutorial 3).\n\n3. Things to notice:\n • The Aftertouch responding continuously to your finger pressure\n • Pitch bend or vibrato on the Keywave or the Ribbon ranges up to ±1 octave\n • Each new note is assigned to a unique MIDI Channel"
 				}
 
 			}
