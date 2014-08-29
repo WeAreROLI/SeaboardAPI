@@ -4,74 +4,131 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <style>
-*{margin:0;padding:0;}
-body {
-	font:13.34px helvetica,arial,freesans,clean,sans-serif;
-	color:black;
-	line-height:1.4em;
-	background-color: #F8F8F8;
-	padding: 0.7em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
 }
-p {
-	margin:1em 0;
-	line-height:1.5em;
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
 }
 table {
-	font-size:inherit;
-	font:100%;
-	margin:1em;
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
 }
-table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
-table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
-input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
-select,option{padding:0 .25em;}
-optgroup{margin-top:.5em;}
-pre,code{font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;}
-pre {
-	margin:1em 0;
-	font-size:12px;
-	background-color:#eee;
-	border:1px solid #ddd;
-	padding:5px;
-	line-height:1.5em;
-	color:#444;
-	overflow:auto;
-	-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
-	-webkit-border-radius:3px;
-	-moz-border-radius:3px;border-radius:3px;
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
 }
-pre code {
-	padding:0;
-	font-size:12px;
-	background-color:#eee;
-	border:none;
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
 }
 code {
-	font-size:12px;
-	background-color:#f8f8ff;
-	color:#444;
-	padding:0 .2em;
-	border:1px solid #dedede;
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
-img{border:0;max-width:100%;}
-abbr{border-bottom:none;}
-a{color:#4183c4;text-decoration:none;}
-a:hover{text-decoration:underline;}
-a code,a:link code,a:visited code{color:#4183c4;}
-h2,h3{margin:1em 0;}
-h1,h2,h3,h4,h5,h6{border:0;}
-h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:1.5em;}
-h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}
-h2{font-size:150%;margin-top:1.5em;border-top:4px solid #e0e0e0;padding-top:.5em;}
-h3{margin-top:1em;}
-hr{border:1px solid #ddd;}
-ul{margin:1em 0 1em 2em;}
-ol{margin:1em 0 1em 2em;}
-ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
-ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
-blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
-dt{font-weight:bold;margin-left:1em;}
-dd{margin-left:2em;margin-bottom:1em;}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
 sup {
     font-size: 0.83em;
     vertical-align: super;
@@ -83,15 +140,15 @@ sup {
 @media screen and (min-width: 914px) {
     body {
         width: 854px;
-        margin:0 auto;
+        margin:10px auto;
     }
 }
 @media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
 	table, pre {
 		page-break-inside: avoid;
-	}
-	pre {
-		word-wrap: break-word;
 	}
 }
 </style>
@@ -103,27 +160,26 @@ sup {
 
 <h3>Introduction</h3>
 
-<p>This folder containts three tutorials that a Jules Utility Class Extensions (<a href="juce.com/about-juce">JUCE</a>), an all-encompassing C++ class library for developing cross-platform software, to create a data visualiser and synthesiser controlled by the Seaboard. The tutorials, along with the Seaboard C++ Library Files they use, will get any C++ programmer up and running, and hopefully inspire some hacks.</p>
+<p>This folder contains three tutorials that a Jules Utility Class Extensions (<a href="juce.com/about-juce">JUCE</a>), an all-encompassing C++ class library for developing cross-platform software, to create a data visualiser and synthesiser controlled by the Seaboard. The tutorials, along with the Seaboard C++ Library Files they use, will get any C++ programmer up and running, and hopefully inspire some hacks.</p>
 
 <h3>Tutorial 1: Visual Feedback</h3>
 
 <ul>
-<li>Navigate to JUCE/SeaboardVisuals and open up <code>SeaboardVisuals.jucer</code>.</li>
+<li>Navigate to JUCE/SeaboardVisuals and open up <code>SeaboardVisuals.jucer</code> in the Introjucer app. If you've never used JUCE before, you can find the executable in JUCE/Introjucer.</li>
 <li>Click on ‘Config’ in the upper left and then click ‘Save Project and Open in Xcode…’ at the bottom.</li>
 <li>In Xcode, expand the SeaboardVisuals/Source folder and click on <code>SeaboardComponent.h</code>.</li>
 </ul>
 
 
-<p>This class holds all of our Seaboard responder objects. When our project is compiled, a SeaboardComponent will be created and presented in a simple window.</p>
+<p>When our project is compiled, a SeaboardComponent will be created and presented as a simple window. The SeaboardComponent class relies on two main components: 1) a Seaboard object which manages all the message callbacks from the Seaboard hardware, and 2) a Seaboard Visualiser object with handles the MIDI visualisation that is rendered to the SeaboardComponent Window</p>
 
-<p>The first object our component requires is a Seaboard object. The Seaboard object deals with the device management and information handling. When the physical Seaboard sends messages to our application, the Seaboard virtual object will process them and pass them on to <code>Seaboard::Listener</code> objects.</p>
+<p>Take a closer look at the Seaboard class. It is a simple MidiInputCallback subclass that decodes messages from the Seaboard and triggers one of 5 callback methods. To respond to these callbacks in a class of your own, you simple need to subclass the Seabaord::Listener class, and implement whichever methods your would like to listen to. You then need to call Seaboard::addListener() to register your class to the Listener list.</p>
 
-<p>The second object our component takes is a <code>SeaboardVisualiser</code> object.
-Click on <code>SeaboardVisualiser.h</code>. This object will visualise the midi information coming from the Seaboard. Note that <code>SeaboardVisualiser</code> inherits from three separate classes: <code>Component</code>, <code>Seaboard::Listener</code> and <code>ValueTree::Listener</code>.</p>
+<p>A great example of a Seaboard::Listener subclass is the SeaboardVisualiser. This only listens to note on and note off messages, and stores the data from these callbacks in a ValueTree object. The view is then re-drawn using this updated data to visualise the messages coming from the Seaboard.</p>
 
 <h4>Value Trees</h4>
 
-<p>The <code>ValueTree::Listener</code> object provides methods to respond to changes to Value Tree objects. ValueTree objects are tree-like data structures provided by the JUCE library. Value Trees can contain any number of properties and any number of child trees. In our implementation, we add a value tree called <code>theSeaboardData</code>, to which we will add child value trees to represent each current note being played on the Seaboard. For example, the tree might be represented visually as such:</p>
+<p>The <code>ValueTree::Listener</code> protocol provides methods to respond to changes to Value Tree objects. ValueTree objects are tree-like data structures provided by the JUCE library. Value Trees can contain any number of properties and any number of child trees. In our implementation, we add a value tree called <code>theSeaboardData</code>, to which we will add child value trees to represent each current note being played on the Seaboard. For example, the tree might be represented visually as such:</p>
 
 <pre><code>theSeaboardData
 |
@@ -135,7 +191,7 @@ Click on <code>SeaboardVisualiser.h</code>. This object will visualise the midi 
 |
     Note - Channel 2
     |
-    -MIDI Note Number = 100 
+    -MIDI Note Number = 100
 |
 |
 </code></pre>
