@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="Vms7QX" name="SeaboardSynth" projectType="guiapp" version="1.0.0"
+              bundleIdentifier="com.yourcompany.SeaboardSynth" includeBinaryInAppConfig="1"
+              jucerVersion="3.1.0">
+  <MAINGROUP id="h5oDbx" name="SeaboardSynth">
+    <GROUP id="{5BEAC51D-56AA-6F38-6829-5398749C87AA}" name="SeaboardLibraryCode">
+      <FILE id="vWze6o" name="BinaryData.cpp" compile="1" resource="0" file="../Library/SeaboardLibraryCode/BinaryData.cpp"/>
+      <FILE id="Pkj9FW" name="BinaryData.h" compile="0" resource="0" file="../Library/SeaboardLibraryCode/BinaryData.h"/>
+      <FILE id="A4uWfR" name="Seaboard.cpp" compile="1" resource="0" file="../Library/SeaboardLibraryCode/Seaboard.cpp"/>
+      <FILE id="M7s2Jg" name="Seaboard.h" compile="0" resource="0" file="../Library/SeaboardLibraryCode/Seaboard.h"/>
+      <FILE id="eEXqit" name="SeaboardPlayer.cpp" compile="1" resource="0"
+            file="../Library/SeaboardLibraryCode/SeaboardPlayer.cpp"/>
+      <FILE id="K1gF8w" name="SeaboardVoice.cpp" compile="1" resource="0"
+            file="../Library/SeaboardLibraryCode/SeaboardVoice.cpp"/>
+    </GROUP>
+    <GROUP id="{083CAB23-77E5-6FE7-0F93-740EB871866E}" name="Source">
+      <FILE id="VhkcO4" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="hfEHzo" name="SeaboardComponent.h" compile="0" resource="0"
+            file="Source/SeaboardComponent.h"/>
+      <FILE id="PXodFw" name="SeaboardComponent.cpp" compile="1" resource="0"
+            file="Source/SeaboardComponent.cpp"/>
+      <FILE id="ASdIaK" name="SeaboardVisualiser.h" compile="0" resource="0"
+            file="Source/SeaboardVisualiser.h"/>
+      <FILE id="UOabbF" name="SeaboardVisualiser.cpp" compile="1" resource="0"
+            file="Source/SeaboardVisualiser.cpp"/>
+      <FILE id="PXzjyP" name="SineWaveVoice.cpp" compile="1" resource="0"
+            file="Source/SineWaveVoice.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="1" optimisation="1" targetName="SeaboardSynth"/>
+        <CONFIGURATION name="Release" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="0" optimisation="2" targetName="SeaboardSynth"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../Library/modules"/>
+        <MODULEPATH id="juce_events" path="../Library/modules"/>
+        <MODULEPATH id="juce_graphics" path="../Library/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../Library/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../Library/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../Library/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../Library/modules"/>
+        <MODULEPATH id="juce_video" path="../Library/modules"/>
+        <MODULEPATH id="juce_opengl" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../Library/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../Library/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULES id="juce_audio_basics" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_audio_devices" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_audio_formats" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_audio_processors" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_core" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_cryptography" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_data_structures" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_events" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_graphics" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_gui_basics" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_gui_extra" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_opengl" showAllCode="0" useLocalCopy="0"/>
+    <MODULES id="juce_video" showAllCode="0" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS/>
+</JUCERPROJECT>
