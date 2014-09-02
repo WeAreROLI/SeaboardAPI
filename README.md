@@ -22,6 +22,13 @@ If you have not yet, please visit our official [ROLI Music Hack Day Intro Page](
 - Connect a Seaboard (ask someone with a ROLI t-shirt)
 - Launch a Max/MSP patch
 
+###Python Quick Start
+- Install python-rtmidi using `sudo pip --pre python-rtmidi`
+- Clone this repo
+- Connect a Seaboard (ask someone with a ROLI t-shirt)
+- Launch Terminal on Mac or Linux, or a Python Environment in Windows
+- Navigate to your repo directory and use `python pySeaboard.py Seaboard` to launch
+
 ###Feedback
 
 Do you have any feedback for us? If so, please get in touch support@roli.com
