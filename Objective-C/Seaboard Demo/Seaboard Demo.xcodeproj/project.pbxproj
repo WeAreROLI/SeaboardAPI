@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BE5544F19B74F4F00D16D47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5544E19B74F4F00D16D47 /* Foundation.framework */; };
+		4BE5545119B74F4F00D16D47 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5545019B74F4F00D16D47 /* CoreGraphics.framework */; };
+		4BE5545319B74F4F00D16D47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5545219B74F4F00D16D47 /* UIKit.framework */; };
+		4BE5545919B74F4F00D16D47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BE5545719B74F4F00D16D47 /* InfoPlist.strings */; };
+		4BE5545B19B74F4F00D16D47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE5545A19B74F4F00D16D47 /* main.m */; };
+		4BE5545F19B74F4F00D16D47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE5545E19B74F4F00D16D47 /* AppDelegate.m */; };
+		4BE5546219B74F4F00D16D47 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE5546019B74F4F00D16D47 /* Main_iPhone.storyboard */; };
+		4BE5546519B74F4F00D16D47 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE5546319B74F4F00D16D47 /* Main_iPad.storyboard */; };
+		4BE5546819B74F4F00D16D47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE5546719B74F4F00D16D47 /* ViewController.m */; };
+		4BE5546A19B74F4F00D16D47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE5546919B74F4F00D16D47 /* Images.xcassets */; };
+		4BE5547119B74F4F00D16D47 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5547019B74F4F00D16D47 /* XCTest.framework */; };
+		4BE5547219B74F4F00D16D47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5544E19B74F4F00D16D47 /* Foundation.framework */; };
+		4BE5547319B74F4F00D16D47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5545219B74F4F00D16D47 /* UIKit.framework */; };
+		4BE5547B19B74F4F00D16D47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BE5547919B74F4F00D16D47 /* InfoPlist.strings */; };
+		4BE5547D19B74F4F00D16D47 /* Seaboard_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE5547C19B74F4F00D16D47 /* Seaboard_DemoTests.m */; };
+		4BE5548819B74F7E00D16D47 /* Seaboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE5548719B74F7E00D16D47 /* Seaboard.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BE5547419B74F4F00D16D47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BE5544319B74F4F00D16D47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BE5544A19B74F4F00D16D47;
+			remoteInfo = "Seaboard Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4BE5544B19B74F4F00D16D47 /* Seaboard Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seaboard Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BE5544E19B74F4F00D16D47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4BE5545019B74F4F00D16D47 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4BE5545219B74F4F00D16D47 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4BE5545619B74F4F00D16D47 /* Seaboard Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Seaboard Demo-Info.plist"; sourceTree = "<group>"; };
+		4BE5545819B74F4F00D16D47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4BE5545A19B74F4F00D16D47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4BE5545C19B74F4F00D16D47 /* Seaboard Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Seaboard Demo-Prefix.pch"; sourceTree = "<group>"; };
+		4BE5545D19B74F4F00D16D47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4BE5545E19B74F4F00D16D47 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4BE5546119B74F4F00D16D47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		4BE5546419B74F4F00D16D47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		4BE5546619B74F4F00D16D47 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4BE5546719B74F4F00D16D47 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4BE5546919B74F4F00D16D47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4BE5546F19B74F4F00D16D47 /* Seaboard DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Seaboard DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BE5547019B74F4F00D16D47 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4BE5547819B74F4F00D16D47 /* Seaboard DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Seaboard DemoTests-Info.plist"; sourceTree = "<group>"; };
+		4BE5547A19B74F4F00D16D47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4BE5547C19B74F4F00D16D47 /* Seaboard_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Seaboard_DemoTests.m; sourceTree = "<group>"; };
+		4BE5548619B74F7E00D16D47 /* Seaboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seaboard.h; sourceTree = "<group>"; };
+		4BE5548719B74F7E00D16D47 /* Seaboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seaboard.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BE5544819B74F4F00D16D47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE5545119B74F4F00D16D47 /* CoreGraphics.framework in Frameworks */,
+				4BE5545319B74F4F00D16D47 /* UIKit.framework in Frameworks */,
+				4BE5544F19B74F4F00D16D47 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BE5546C19B74F4F00D16D47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE5547119B74F4F00D16D47 /* XCTest.framework in Frameworks */,
+				4BE5547319B74F4F00D16D47 /* UIKit.framework in Frameworks */,
+				4BE5547219B74F4F00D16D47 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BE5544219B74F4F00D16D47 = {
+			isa = PBXGroup;
+			children = (
+				4BE5545419B74F4F00D16D47 /* Seaboard Demo */,
+				4BE5547619B74F4F00D16D47 /* Seaboard DemoTests */,
+				4BE5544D19B74F4F00D16D47 /* Frameworks */,
+				4BE5544C19B74F4F00D16D47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BE5544C19B74F4F00D16D47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BE5544B19B74F4F00D16D47 /* Seaboard Demo.app */,
+				4BE5546F19B74F4F00D16D47 /* Seaboard DemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BE5544D19B74F4F00D16D47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BE5544E19B74F4F00D16D47 /* Foundation.framework */,
+				4BE5545019B74F4F00D16D47 /* CoreGraphics.framework */,
+				4BE5545219B74F4F00D16D47 /* UIKit.framework */,
+				4BE5547019B74F4F00D16D47 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BE5545419B74F4F00D16D47 /* Seaboard Demo */ = {
+			isa = PBXGroup;
+			children = (
+				4BE5545D19B74F4F00D16D47 /* AppDelegate.h */,
+				4BE5545E19B74F4F00D16D47 /* AppDelegate.m */,
+				4BE5546019B74F4F00D16D47 /* Main_iPhone.storyboard */,
+				4BE5546319B74F4F00D16D47 /* Main_iPad.storyboard */,
+				4BE5546619B74F4F00D16D47 /* ViewController.h */,
+				4BE5546719B74F4F00D16D47 /* ViewController.m */,
+				4BE5546919B74F4F00D16D47 /* Images.xcassets */,
+				4BE5545519B74F4F00D16D47 /* Supporting Files */,
+				4BE5548619B74F7E00D16D47 /* Seaboard.h */,
+				4BE5548719B74F7E00D16D47 /* Seaboard.m */,
+			);
+			path = "Seaboard Demo";
+			sourceTree = "<group>";
+		};
+		4BE5545519B74F4F00D16D47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BE5545619B74F4F00D16D47 /* Seaboard Demo-Info.plist */,
+				4BE5545719B74F4F00D16D47 /* InfoPlist.strings */,
+				4BE5545A19B74F4F00D16D47 /* main.m */,
+				4BE5545C19B74F4F00D16D47 /* Seaboard Demo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BE5547619B74F4F00D16D47 /* Seaboard DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4BE5547C19B74F4F00D16D47 /* Seaboard_DemoTests.m */,
+				4BE5547719B74F4F00D16D47 /* Supporting Files */,
+			);
+			path = "Seaboard DemoTests";
+			sourceTree = "<group>";
+		};
+		4BE5547719B74F4F00D16D47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BE5547819B74F4F00D16D47 /* Seaboard DemoTests-Info.plist */,
+				4BE5547919B74F4F00D16D47 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BE5544A19B74F4F00D16D47 /* Seaboard Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BE5548019B74F4F00D16D47 /* Build configuration list for PBXNativeTarget "Seaboard Demo" */;
+			buildPhases = (
+				4BE5544719B74F4F00D16D47 /* Sources */,
+				4BE5544819B74F4F00D16D47 /* Frameworks */,
+				4BE5544919B74F4F00D16D47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Seaboard Demo";
+			productName = "Seaboard Demo";
+			productReference = 4BE5544B19B74F4F00D16D47 /* Seaboard Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4BE5546E19B74F4F00D16D47 /* Seaboard DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BE5548319B74F4F00D16D47 /* Build configuration list for PBXNativeTarget "Seaboard DemoTests" */;
+			buildPhases = (
+				4BE5546B19B74F4F00D16D47 /* Sources */,
+				4BE5546C19B74F4F00D16D47 /* Frameworks */,
+				4BE5546D19B74F4F00D16D47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BE5547519B74F4F00D16D47 /* PBXTargetDependency */,
+			);
+			name = "Seaboard DemoTests";
+			productName = "Seaboard DemoTests";
+			productReference = 4BE5546F19B74F4F00D16D47 /* Seaboard DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BE5544319B74F4F00D16D47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ROLI;
+				TargetAttributes = {
+					4BE5546E19B74F4F00D16D47 = {
+						TestTargetID = 4BE5544A19B74F4F00D16D47;
+					};
+				};
+			};
+			buildConfigurationList = 4BE5544619B74F4F00D16D47 /* Build configuration list for PBXProject "Seaboard Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BE5544219B74F4F00D16D47;
+			productRefGroup = 4BE5544C19B74F4F00D16D47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BE5544A19B74F4F00D16D47 /* Seaboard Demo */,
+				4BE5546E19B74F4F00D16D47 /* Seaboard DemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BE5544919B74F4F00D16D47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE5546519B74F4F00D16D47 /* Main_iPad.storyboard in Resources */,
+				4BE5546A19B74F4F00D16D47 /* Images.xcassets in Resources */,
+				4BE5546219B74F4F00D16D47 /* Main_iPhone.storyboard in Resources */,
+				4BE5545919B74F4F00D16D47 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BE5546D19B74F4F00D16D47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE5547B19B74F4F00D16D47 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BE5544719B74F4F00D16D47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE5546819B74F4F00D16D47 /* ViewController.m in Sources */,
+				4BE5545F19B74F4F00D16D47 /* AppDelegate.m in Sources */,
+				4BE5548819B74F7E00D16D47 /* Seaboard.m in Sources */,
+				4BE5545B19B74F4F00D16D47 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BE5546B19B74F4F00D16D47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE5547D19B74F4F00D16D47 /* Seaboard_DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BE5547519B74F4F00D16D47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BE5544A19B74F4F00D16D47 /* Seaboard Demo */;
+			targetProxy = 4BE5547419B74F4F00D16D47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4BE5545719B74F4F00D16D47 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BE5545819B74F4F00D16D47 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4BE5546019B74F4F00D16D47 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BE5546119B74F4F00D16D47 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		4BE5546319B74F4F00D16D47 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BE5546419B74F4F00D16D47 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		4BE5547919B74F4F00D16D47 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BE5547A19B74F4F00D16D47 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BE5547E19B74F4F00D16D47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BE5547F19B74F4F00D16D47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BE5548119B74F4F00D16D47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Seaboard Demo/Seaboard Demo-Prefix.pch";
+				INFOPLIST_FILE = "Seaboard Demo/Seaboard Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4BE5548219B74F4F00D16D47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Seaboard Demo/Seaboard Demo-Prefix.pch";
+				INFOPLIST_FILE = "Seaboard Demo/Seaboard Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4BE5548419B74F4F00D16D47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Seaboard Demo.app/Seaboard Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Seaboard Demo/Seaboard Demo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Seaboard DemoTests/Seaboard DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4BE5548519B74F4F00D16D47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Seaboard Demo.app/Seaboard Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Seaboard Demo/Seaboard Demo-Prefix.pch";
+				INFOPLIST_FILE = "Seaboard DemoTests/Seaboard DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BE5544619B74F4F00D16D47 /* Build configuration list for PBXProject "Seaboard Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BE5547E19B74F4F00D16D47 /* Debug */,
+				4BE5547F19B74F4F00D16D47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BE5548019B74F4F00D16D47 /* Build configuration list for PBXNativeTarget "Seaboard Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BE5548119B74F4F00D16D47 /* Debug */,
+				4BE5548219B74F4F00D16D47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4BE5548319B74F4F00D16D47 /* Build configuration list for PBXNativeTarget "Seaboard DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BE5548419B74F4F00D16D47 /* Debug */,
+				4BE5548519B74F4F00D16D47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4BE5544319B74F4F00D16D47 /* Project object */;
+}
