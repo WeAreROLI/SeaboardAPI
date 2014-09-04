@@ -67,30 +67,26 @@ class SeaboardInputHandler(object):
     channel = data[0] - MIDI_OFF + 1
     note = data[1]
     velocity = data[2]
-    print "Note On - Ch:" + str(channel) +
-          " Note:" + str(note) + " Velocity:" + str(velocity)
+    print "Note On - Ch:" + str(channel) + " Note:" + str(note) + " Velocity:" + str(velocity)
 
   def noteOff(self, data):
     channel = data[0] - MIDI_ON + 1
     note = data[1]
     velocity = data[2]
-    print "Note Off - Ch:" + str(channel) +
-          " Note:" + str(note) + " Velocity:" + str(velocity)
+    print "Note Off - Ch:" + str(channel) + " Note:" + str(note) + " Velocity:" + str(velocity)
 
   def aftertouch(self, data):
     channel = data[0] - MIDI_POLY_AFTERTOUCH + 1
     note = data[1]
     pressure = data[2]
-    print "Aftertouch - Ch:" + str(channel) +
-          " Note:" + str(note) + " Pressure:" + str(pressure)
+    print "Aftertouch - Ch:" + str(channel) + " Note:" + str(note) + " Pressure:" + str(pressure)
 
   def pitchbend(self, data):
     channel = data[0] - MIDI_PITCH_BEND + 1
     MSB = data[2]
     LSB = data[1]
     bend = (MSB << 4) + LSB
-    print "Pitch Bend - Ch: " + str(channel) +
-          " Bend:" + str(bend)
+    print "Pitch Bend - Ch: " + str(channel) + " Bend:" + str(bend)
 
 """
   MIDI Input Device Connection Establishment
