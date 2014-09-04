@@ -21,7 +21,6 @@
 
 @property (nonatomic, weak) id<SeaboardDelegate> delegate;
 
-- (void)processMidiDevices;
-- (void)verifyMidiDevices;
+- (void)connect;
 
 @end

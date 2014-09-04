@@ -16,25 +16,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Hello World" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMW-T7-h48">
-                                <rect key="frame" x="20" y="20" width="280" height="469"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMW-T7-h48">
+                                <rect key="frame" x="20" y="49" width="280" height="461"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0m-g3-5u2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0m-g3-5u2">
                                 <rect key="frame" x="20" y="518" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Connect To Seaboard">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="midiButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8pk-DU-v4B"/>
+                                    <action selector="connectToSeaboardButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="esA-oc-8Q3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seaboard Output Console" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qd9-vP-2IB">
+                                <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93098294005102045" green="0.93098294005102045" blue="0.93098294005102045" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qd9-vP-2IB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="52z-vF-Z3m"/>
+                            <constraint firstItem="I0m-g3-5u2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="OE9-L3-Oig"/>
+                            <constraint firstItem="eMW-T7-h48" firstAttribute="top" secondItem="Qd9-vP-2IB" secondAttribute="bottom" constant="8" id="R1g-Tg-vHy"/>
+                            <constraint firstAttribute="trailing" secondItem="I0m-g3-5u2" secondAttribute="trailing" constant="20" id="WEs-uP-eTa"/>
+                            <constraint firstItem="eMW-T7-h48" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="cKf-AI-FUn"/>
+                            <constraint firstAttribute="trailing" secondItem="eMW-T7-h48" secondAttribute="trailing" constant="20" id="eP7-NC-AJK"/>
+                            <constraint firstAttribute="trailing" secondItem="Qd9-vP-2IB" secondAttribute="trailing" constant="20" id="fsb-jO-9jx"/>
+                            <constraint firstItem="I0m-g3-5u2" firstAttribute="top" secondItem="eMW-T7-h48" secondAttribute="bottom" constant="8" id="lff-xu-FKy"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="I0m-g3-5u2" secondAttribute="bottom" constant="20" id="oMY-18-flT"/>
+                            <constraint firstItem="Qd9-vP-2IB" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="vbT-cR-xus"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="logger" destination="eMW-T7-h48" id="qtv-Zk-R9s"/>
@@ -42,6 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="81" y="122"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

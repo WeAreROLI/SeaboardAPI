@@ -10,14 +10,15 @@
 #import <CoreMIDI/CoreMIDI.h>
 #import "MIDIMessage.h"
 
-#define kMIDI_COMMAND_NOTE_ON 0x09
-#define kMIDI_COMMAND_NOTE_OFF 0x08
-#define kMIDI_COMMAND_POLY_AFTERTOUCH 0x0A
-#define kMIDI_COMMAND_PITCH_BEND 0x0E
-
+//======================================================================
+#pragma mark Static Callback Methods
+//======================================================================
 static void	MIDIMessageCallback(const MIDIPacketList *pktlist, void *refCon, void *connRefCon);
 void MIDINotifyCallback(const MIDINotification *message, void *refCon);
 
+//======================================================================
+#pragma mark Main Implementation
+//======================================================================
 @implementation Seaboard
 
 - (id)init
@@ -29,27 +30,42 @@ void MIDINotifyCallback(const MIDINotification *message, void *refCon);
 	return self;
 }
 
-- (void)scanForDevices
+- (void)connect
+{
+	[self scanForDevicesAndConnect];
+}
+
+- (void)scanForDevicesAndConnect
 {
 	MIDIClientRef client;
-	MIDIClientCreate(CFSTR("Core MIDI to System Sounds Demo"), MIDINotifyCallback, (__bridge void*)self, &client);
+	MIDIClientCreate(CFSTR("Seaboard MIDI Client"), MIDINotifyCallback, (__bridge void*)self, &client);
 	
 	MIDIPortRef inPort;
 	MIDIInputPortCreate(client, CFSTR("Input port"), MIDIMessageCallback, (__bridge void*)self, &inPort);
 	
 	unsigned long sourceCount = MIDIGetNumberOfSources();
-	[self printToDelegate:[NSString stringWithFormat:@"%ld sources\n", sourceCount]];
+	[self printToDelegate:[NSString stringWithFormat:@"Found: %ld sources\n", sourceCount]];
 	for (int i = 0; i < sourceCount; ++i) {
 		MIDIEndpointRef src = MIDIGetSource(i);
 		CFStringRef endpointName = NULL;
 		OSStatus nameErr = MIDIObjectGetStringProperty(src, kMIDIPropertyName, &endpointName);
 		if (noErr == nameErr)
 		{
-			[self printToDelegate:[NSString stringWithFormat:@"  source %d: %@\n", i, endpointName]];
+			[self printToDelegate:[NSString stringWithFormat:@"- %d: %@\n", i, endpointName]];
 		}
 		MIDIPortConnectSource(inPort, src, NULL);
 	}
+}
 
+//======================================================================
+#pragma mark Delegate Handlers
+//======================================================================
+- (void)sendMessageToDelegates:(MIDIMessage *)message
+{
+	if ([self.delegate respondsToSelector:@selector(seaboardDidGetMIDIMessage:)])
+	{
+		[self.delegate seaboardDidGetMIDIMessage:message];
+	}
 }
 
 - (void)printToDelegate:(NSString*)message
@@ -60,53 +76,15 @@ void MIDINotifyCallback(const MIDINotification *message, void *refCon);
 	}
 }
 
-- (void)processMidiDevices
-{
-}
-
-- (void)verifyMidiDevices
-{
-	[self scanForDevices];
-}
-
+//======================================================================
+#pragma mark Callback Methods for MIDI
+//======================================================================
 static void	MIDIMessageCallback(const MIDIPacketList *pktlist, void *refCon, void *connRefCon)
 {
-	
-	Seaboard *sb = (__bridge Seaboard*)refCon;
-	[sb printToDelegate:@"MidiREad Haddpened"];
-	
 	MIDIPacket *packet = (MIDIPacket *)pktlist->packet;
-	Byte midiCommand = packet->data[0] >> 4;
-	NSString *messageOutput = [NSString new];
-	
-	switch (midiCommand)
-	{
-		case kMIDI_COMMAND_NOTE_ON:
-		{
-			Byte note = packet->data[1] & 0x7F;
-			Byte veolocity = packet->data[2] & 0x7F;
-			messageOutput = [NSString stringWithFormat:@"Note ON. Note=%d, Velocity=%d", note, veolocity];
-		}
-			break;
-			
-		case kMIDI_COMMAND_NOTE_OFF:
-			messageOutput = @"Note OFF";
-			break;
-			
-		case kMIDI_COMMAND_POLY_AFTERTOUCH:
-			messageOutput = @"Poly Aftertouch";
-			break;
-			
-		case kMIDI_COMMAND_PITCH_BEND:
-			messageOutput = @"Poly Pitch Bend";
-			break;
-			
-		default:
-			messageOutput = @"Unknown Message";
-			break;
-	}
-	
-	[sb printToDelegate:messageOutput];
+	MIDIMessage *message = [[MIDIMessage alloc] initWithMidiPacket:packet];
+	Seaboard *sb = (__bridge Seaboard*)refCon;
+	[sb sendMessageToDelegates:message];
 }
 
 

@@ -19,6 +19,10 @@
 
 @implementation ViewController
 
+//======================================================================
+#pragma mark SeaboardDelegate methods
+//======================================================================
+
 - (void)seaboardDidGetMIDIMessage:(MIDIMessage *)message
 {
 	[self appendToLog:[message description]];
@@ -29,25 +33,31 @@
 	[self appendToLog:message];
 }
 
-- (void)midiNoteReceived
-{
-	[self appendToLog:@"New Note!"];
-}
+//======================================================================
+#pragma mark Message Log methods
+//======================================================================
 
 - (void)appendToLog:(NSString *)message
 {
 	dispatch_async(dispatch_get_main_queue(), ^{
-		self.logger.text = [NSString stringWithFormat:@"%@%@\n",
+		self.logger.text = [NSString stringWithFormat:@"%@%@",
 							  self.logger.text, message];
 		[self.logger scrollRangeToVisible:NSMakeRange(self.logger.text.length-1, 1)];
 	});
-
 }
 
-- (IBAction)midiButtonPressed:(id)sender
+//======================================================================
+#pragma mark IBActions
+//======================================================================
+
+- (IBAction)connectToSeaboardButtonPressed:(id)sender
 {
-	[self.seaboard verifyMidiDevices];
+	[self.seaboard connect];
 }
+
+//======================================================================
+#pragma mark View Controller methods
+//======================================================================
 
 - (void)viewDidLoad
 {
