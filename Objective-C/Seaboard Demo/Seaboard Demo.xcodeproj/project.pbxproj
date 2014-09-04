@@ -23,6 +23,7 @@
 		4BE5547B19B74F4F00D16D47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BE5547919B74F4F00D16D47 /* InfoPlist.strings */; };
 		4BE5547D19B74F4F00D16D47 /* Seaboard_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE5547C19B74F4F00D16D47 /* Seaboard_DemoTests.m */; };
 		4BE5548819B74F7E00D16D47 /* Seaboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE5548719B74F7E00D16D47 /* Seaboard.m */; };
+		4BE5548A19B7504200D16D47 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5548919B7504200D16D47 /* CoreMIDI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		4BE5547C19B74F4F00D16D47 /* Seaboard_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Seaboard_DemoTests.m; sourceTree = "<group>"; };
 		4BE5548619B74F7E00D16D47 /* Seaboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seaboard.h; sourceTree = "<group>"; };
 		4BE5548719B74F7E00D16D47 /* Seaboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seaboard.m; sourceTree = "<group>"; };
+		4BE5548919B7504200D16D47 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BE5548A19B7504200D16D47 /* CoreMIDI.framework in Frameworks */,
 				4BE5545119B74F4F00D16D47 /* CoreGraphics.framework in Frameworks */,
 				4BE5545319B74F4F00D16D47 /* UIKit.framework in Frameworks */,
 				4BE5544F19B74F4F00D16D47 /* Foundation.framework in Frameworks */,
@@ -106,6 +109,7 @@
 		4BE5544D19B74F4F00D16D47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BE5548919B7504200D16D47 /* CoreMIDI.framework */,
 				4BE5544E19B74F4F00D16D47 /* Foundation.framework */,
 				4BE5545019B74F4F00D16D47 /* CoreGraphics.framework */,
 				4BE5545219B74F4F00D16D47 /* UIKit.framework */,
@@ -121,12 +125,12 @@
 				4BE5545E19B74F4F00D16D47 /* AppDelegate.m */,
 				4BE5546019B74F4F00D16D47 /* Main_iPhone.storyboard */,
 				4BE5546319B74F4F00D16D47 /* Main_iPad.storyboard */,
+				4BE5548619B74F7E00D16D47 /* Seaboard.h */,
+				4BE5548719B74F7E00D16D47 /* Seaboard.m */,
 				4BE5546619B74F4F00D16D47 /* ViewController.h */,
 				4BE5546719B74F4F00D16D47 /* ViewController.m */,
 				4BE5546919B74F4F00D16D47 /* Images.xcassets */,
 				4BE5545519B74F4F00D16D47 /* Supporting Files */,
-				4BE5548619B74F7E00D16D47 /* Seaboard.h */,
-				4BE5548719B74F7E00D16D47 /* Seaboard.m */,
 			);
 			path = "Seaboard Demo";
 			sourceTree = "<group>";
@@ -476,6 +480,7 @@
 				4BE5548219B74F4F00D16D47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4BE5548319B74F4F00D16D47 /* Build configuration list for PBXNativeTarget "Seaboard DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +489,7 @@
 				4BE5548519B74F4F00D16D47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

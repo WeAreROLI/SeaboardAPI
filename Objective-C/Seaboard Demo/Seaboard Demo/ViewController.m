@@ -7,23 +7,42 @@
 //
 
 #import "ViewController.h"
+#import "Seaboard.h"
 
-@interface ViewController ()
+@interface ViewController()
+
+@property (weak, nonatomic) IBOutlet UITextView *logger;
 
 @end
 
 @implementation ViewController
 
+- (void)appendToLog:(NSString *)message
+{
+	NSString *newMessage = message;
+	newMessage = [newMessage stringByAppendingString:@"\n"];
+	newMessage = [newMessage stringByAppendingString:[self.logger text]];
+	
+	[self.logger setText:newMessage];
+}
+
+- (IBAction)midiButtonPressed:(id)sender
+{
+	
+}
+- (IBAction)verifyMidiButton:(id)sender
+{
+	
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
