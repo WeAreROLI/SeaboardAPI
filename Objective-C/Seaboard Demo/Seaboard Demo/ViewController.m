@@ -9,21 +9,35 @@
 #import "ViewController.h"
 #import "Seaboard.h"
 
-@interface ViewController()
+@interface ViewController() <SeaboardDelegate>
 
+@property (nonatomic, retain) Seaboard *seaboard;
 @property (weak, nonatomic) IBOutlet UITextView *logger;
 
 @end
 
 @implementation ViewController
 
+//@synthesize seaboard;
+
+- (void)seabaordDidSendMessage:(NSString *)message
+{
+	[self appendToLog:message];
+}
+
+- (void)midiNoteReceived
+{
+	[self appendToLog:@"New Note!"];
+}
+
 - (void)appendToLog:(NSString *)message
 {
-	NSString *newMessage = message;
-	newMessage = [newMessage stringByAppendingString:@"\n"];
-	newMessage = [newMessage stringByAppendingString:[self.logger text]];
-	
-	[self.logger setText:newMessage];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		self.logger.text = [NSString stringWithFormat:@"%@%@\n",
+							  self.logger.text, message];
+		[self.logger scrollRangeToVisible:NSMakeRange(self.logger.text.length-1, 1)];
+	});
+
 }
 
 - (IBAction)midiButtonPressed:(id)sender
@@ -32,12 +46,15 @@
 }
 - (IBAction)verifyMidiButton:(id)sender
 {
-	
+	[self.seaboard verifyMidiDevices];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	self.seaboard = [[Seaboard alloc] init];
+	[self.seaboard setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
