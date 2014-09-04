@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Seaboard.h"
+#import "MIDIMessage.h"
 
 @interface ViewController() <SeaboardDelegate>
 
@@ -18,7 +19,10 @@
 
 @implementation ViewController
 
-//@synthesize seaboard;
+- (void)seaboardDidGetMIDIMessage:(MIDIMessage *)message
+{
+	[self appendToLog:[message description]];
+}
 
 - (void)seabaordDidSendMessage:(NSString *)message
 {
@@ -41,10 +45,6 @@
 }
 
 - (IBAction)midiButtonPressed:(id)sender
-{
-	
-}
-- (IBAction)verifyMidiButton:(id)sender
 {
 	[self.seaboard verifyMidiDevices];
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BB9430719B8A485007D1051 /* MIDIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9430619B8A485007D1051 /* MIDIMessage.m */; };
 		4BE5544F19B74F4F00D16D47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5544E19B74F4F00D16D47 /* Foundation.framework */; };
 		4BE5545119B74F4F00D16D47 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5545019B74F4F00D16D47 /* CoreGraphics.framework */; };
 		4BE5545319B74F4F00D16D47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5545219B74F4F00D16D47 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4BB9430519B8A485007D1051 /* MIDIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIMessage.h; sourceTree = "<group>"; };
+		4BB9430619B8A485007D1051 /* MIDIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIMessage.m; sourceTree = "<group>"; };
 		4BE5544B19B74F4F00D16D47 /* Seaboard Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seaboard Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE5544E19B74F4F00D16D47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BE5545019B74F4F00D16D47 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +128,8 @@
 				4BE5545E19B74F4F00D16D47 /* AppDelegate.m */,
 				4BE5546019B74F4F00D16D47 /* Main_iPhone.storyboard */,
 				4BE5546319B74F4F00D16D47 /* Main_iPad.storyboard */,
+				4BB9430519B8A485007D1051 /* MIDIMessage.h */,
+				4BB9430619B8A485007D1051 /* MIDIMessage.m */,
 				4BE5548619B74F7E00D16D47 /* Seaboard.h */,
 				4BE5548719B74F7E00D16D47 /* Seaboard.m */,
 				4BE5546619B74F4F00D16D47 /* ViewController.h */,
@@ -262,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB9430719B8A485007D1051 /* MIDIMessage.m in Sources */,
 				4BE5546819B74F4F00D16D47 /* ViewController.m in Sources */,
 				4BE5545F19B74F4F00D16D47 /* AppDelegate.m in Sources */,
 				4BE5548819B74F7E00D16D47 /* Seaboard.m in Sources */,

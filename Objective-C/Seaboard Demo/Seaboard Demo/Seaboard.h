@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class MIDIMessage;
+
 @protocol SeaboardDelegate <NSObject>
 
+- (void)seaboardDidGetMIDIMessage:(MIDIMessage*)message;
 - (void)seabaordDidSendMessage:(NSString*)message;
 
 @end

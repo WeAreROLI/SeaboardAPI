@@ -8,6 +8,7 @@
 
 #import "Seaboard.h"
 #import <CoreMIDI/CoreMIDI.h>
+#import "MIDIMessage.h"
 
 #define kMIDI_COMMAND_NOTE_ON 0x09
 #define kMIDI_COMMAND_NOTE_OFF 0x08
