@@ -1,6 +1,6 @@
 #Music Hack Day Berlin
 
-This repository contains tutorial content to get hackers started with the Seaboard GRAND for [Music Hack Day Berlin](http://musichackday.de/).
+This repository contains tutorial content to get hackers started with the Seaboard GRAND.
 
 If you have not yet, please visit our official [ROLI Music Hack Day Intro Page](https://www.roli.com/musichackday/) to find out more about the Seaboard. If you've just come from there, and you're ready to start hacking, then clone and fork away (or download as a [.zip](https://github.com/WeAreROLI/MHDBerlin/archive/master.zip)). Inside you will find fully documented tutorials for [JUCE](http://www.juce.com/about-juce) and [Max/MSP](http://cycling74.com/products/max/), and you can also use the Quick Start instructions below to get going.
 
