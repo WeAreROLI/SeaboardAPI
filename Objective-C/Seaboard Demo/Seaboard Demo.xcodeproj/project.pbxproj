@@ -42,6 +42,7 @@
 		4B9F7D0C19E55DE500D68682 /* MIDIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIMessage.m; sourceTree = "<group>"; };
 		4B9F7D0D19E55DE500D68682 /* Seaboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seaboard.h; sourceTree = "<group>"; };
 		4B9F7D0E19E55DE500D68682 /* Seaboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seaboard.m; sourceTree = "<group>"; };
+		4BA03DB719E5642D005873EE /* MIDIMessage+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MIDIMessage+Private.h"; sourceTree = "<group>"; };
 		4BE5544B19B74F4F00D16D47 /* Seaboard Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seaboard Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE5544E19B74F4F00D16D47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BE5545019B74F4F00D16D47 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4B9F7D0B19E55DE500D68682 /* MIDIMessage.h */,
+				4BA03DB719E5642D005873EE /* MIDIMessage+Private.h */,
 				4B9F7D0C19E55DE500D68682 /* MIDIMessage.m */,
 				4B9F7D0D19E55DE500D68682 /* Seaboard.h */,
 				4B9F7D0E19E55DE500D68682 /* Seaboard.m */,
@@ -415,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christopher Fonseka (3C44J89HQ4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Seaboard Demo/Seaboard Demo-Prefix.pch";
 				INFOPLIST_FILE = "Seaboard Demo/Seaboard Demo-Info.plist";
@@ -428,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christopher Fonseka (3C44J89HQ4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Seaboard Demo/Seaboard Demo-Prefix.pch";
 				INFOPLIST_FILE = "Seaboard Demo/Seaboard Demo-Info.plist";
