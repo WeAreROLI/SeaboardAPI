@@ -14,6 +14,8 @@
 		4BEC452D19E570C700AC67D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BEC452C19E570C700AC67D6 /* Images.xcassets */; };
 		4BEC453019E570C700AC67D6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEC452E19E570C700AC67D6 /* MainMenu.xib */; };
 		4BEC453C19E570C700AC67D6 /* Breakout2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC453B19E570C700AC67D6 /* Breakout2Tests.m */; };
+		4BEC454B19E5711300AC67D6 /* MIDIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC454819E5711300AC67D6 /* MIDIMessage.m */; };
+		4BEC454C19E5711300AC67D6 /* Seaboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC454A19E5711300AC67D6 /* Seaboard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,11 @@
 		4BEC453519E570C700AC67D6 /* Breakout2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Breakout2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEC453A19E570C700AC67D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BEC453B19E570C700AC67D6 /* Breakout2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Breakout2Tests.m; sourceTree = "<group>"; };
+		4BEC454619E5711300AC67D6 /* MIDIMessage+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIDIMessage+Private.h"; sourceTree = "<group>"; };
+		4BEC454719E5711300AC67D6 /* MIDIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIMessage.h; sourceTree = "<group>"; };
+		4BEC454819E5711300AC67D6 /* MIDIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIMessage.m; sourceTree = "<group>"; };
+		4BEC454919E5711300AC67D6 /* Seaboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seaboard.h; sourceTree = "<group>"; };
+		4BEC454A19E5711300AC67D6 /* Seaboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seaboard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +88,7 @@
 		4BEC451F19E570C700AC67D6 /* Breakout2 */ = {
 			isa = PBXGroup;
 			children = (
+				4BEC454519E5711300AC67D6 /* Seaboard Library */,
 				4BEC452219E570C700AC67D6 /* AppDelegate.h */,
 				4BEC452319E570C700AC67D6 /* AppDelegate.m */,
 				4BEC452719E570C700AC67D6 /* GameScene.h */,
@@ -117,6 +125,19 @@
 				4BEC453A19E570C700AC67D6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BEC454519E5711300AC67D6 /* Seaboard Library */ = {
+			isa = PBXGroup;
+			children = (
+				4BEC454619E5711300AC67D6 /* MIDIMessage+Private.h */,
+				4BEC454719E5711300AC67D6 /* MIDIMessage.h */,
+				4BEC454819E5711300AC67D6 /* MIDIMessage.m */,
+				4BEC454919E5711300AC67D6 /* Seaboard.h */,
+				4BEC454A19E5711300AC67D6 /* Seaboard.m */,
+			);
+			name = "Seaboard Library";
+			path = "../../Seaboard Library";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BEC454B19E5711300AC67D6 /* MIDIMessage.m in Sources */,
 				4BEC452619E570C700AC67D6 /* main.m in Sources */,
 				4BEC452919E570C700AC67D6 /* GameScene.m in Sources */,
+				4BEC454C19E5711300AC67D6 /* Seaboard.m in Sources */,
 				4BEC452419E570C700AC67D6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
