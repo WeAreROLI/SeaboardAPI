@@ -40,7 +40,9 @@ class CinderSeaboardOSCApp : public AppNative {
     // SEABOARD MIDI INFORMATION /////////////////////////////////////
     
     // set how many keys the seaboard has
-    const static int numNotes = 25;
+    const static int numNotes = 74;
+    
+    int currentNum;
     
     int startNote;
     
@@ -89,6 +91,7 @@ void CinderSeaboardOSCApp::setup()
     
     // handles the size of the keyboard variable
     if (numNotes == 25) startNote = 60;
+    startNote = 21;
     if (numNotes == 88) startNote = 0;
     
     for (int i = 0; i < numNotes; ++i)
@@ -105,6 +108,8 @@ void CinderSeaboardOSCApp::setup()
     {
         lastChannelNotes[i] = 0;
     }
+    
+    currentNum = 0;
 }
 
 
@@ -119,6 +124,8 @@ void CinderSeaboardOSCApp::midiListener(midi::Message msg){
     // so the recieving program knows which parameter to change
     message.addIntArg( (int32_t)noteArrayIndex(noteNum) );
     message.setAddress("/noteNum");
+    
+    currentNum = noteNum;
     
     switch (msg.status)
     {
@@ -197,14 +204,13 @@ void CinderSeaboardOSCApp::draw()
         gl::drawSolidCircle(Vec2f(x, y), 5+(noteOns[i]/4));
         gl::drawSolidCircle(Vec2f(lx, ly), 5);
 
-        
     }
     
     
     gl::popMatrices();
     
     gl::color( Color::white() );
-    mTextureFont->drawString("Sending OSC to port: " + toString(port), Vec2f(20.0f, 20.0f));
+    mTextureFont->drawString("Sending OSC to port: " + toString(port) + "  current note: " + toString(currentNum), Vec2f(20.0f, 20.0f));
 }
 
 int CinderSeaboardOSCApp::noteArrayIndex( int n )

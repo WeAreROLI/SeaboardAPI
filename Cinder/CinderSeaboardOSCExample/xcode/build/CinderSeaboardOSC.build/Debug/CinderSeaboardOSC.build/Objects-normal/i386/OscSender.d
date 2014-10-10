@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/felixfaireroli/Developer/CinderSeaboardOSC/blocks/OSC/src/OscSender.cpp \
+  /Users/felixfaire/Developer/CinderSeaboardOSC/blocks/OSC/src/OscSender.cpp \
   ../blocks/OSC/src/OscSender.h ../blocks/OSC/src/OscBundle.h \
   ../blocks/OSC/src/OscMessage.h ../blocks/OSC/src/OscArg.h \
   ../blocks/OSC/src/osc/OscOutboundPacketStream.h \
