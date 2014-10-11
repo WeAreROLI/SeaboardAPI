@@ -17,6 +17,10 @@ enum ColliderType
 };
 
 @interface GameScene () <SKPhysicsContactDelegate, SeaboardDelegate>
+{
+	int noteValue;
+	int pbOffset;
+}
 
 @property (nonatomic, retain) Seaboard* seaboard;
 
@@ -100,6 +104,33 @@ const CGFloat kBallVelocityY= 600;
 - (SKNode*)paddleNode
 {
 	return [self childNodeWithName:@"Paddle"];
+}
+
+- (void)movePaddle
+{
+	float normalisedPitchBendOffset = ((pbOffset - 8192) / 8192.f) * 13;
+	// Need to filter pb reset messages
+	if (normalisedPitchBendOffset > 12 || normalisedPitchBendOffset < -12)
+	{
+		return;
+	}
+	
+	float derivedNote = noteValue + normalisedPitchBendOffset;
+	
+	[self paddleNode].position = [self getPositionForMIDINote:derivedNote];
+}
+
+- (CGPoint)getPositionForMIDINote:(float)note
+{
+	note = (note < kMIDILeft ? kMIDILeft : note);
+	note = (note > kMIDIRight ? kMIDIRight : note);
+	
+	int noteCount = kMIDIRight - kMIDILeft;
+	CGFloat normalisedPosition = (note - kMIDILeft) / (float)noteCount;
+	
+	CGFloat paddleX = self.frame.size.width * normalisedPosition;
+	
+	return CGPointMake(paddleX, kPaddleY);
 }
 
 //======================================================================
@@ -186,25 +217,18 @@ const CGFloat kBallVelocityY= 600;
 #pragma mark Seaboard Code
 //======================================================================
 
-- (CGPoint)getPositionForMIDI:(MIDIMessage*)message
-{
-	int noteNo = message.noteNo;
-	noteNo = (noteNo < kMIDILeft ? kMIDILeft : noteNo);
-	noteNo = (noteNo > kMIDIRight ? kMIDIRight : noteNo);
-	
-	int noteCount = kMIDIRight - kMIDILeft;
-	CGFloat normalisedPosition = (noteNo - kMIDILeft) / (float)noteCount;
-	
-	CGFloat paddleX = self.frame.size.width * normalisedPosition;
-	
-	return CGPointMake(paddleX, kPaddleY);
-}
 
 - (void)seaboardDidGetMIDIMessage:(MIDIMessage *)message
 {
 	if (message.messageType == MIDIMessageTypeNoteOn)
 	{
-		[self paddleNode].position = [self getPositionForMIDI:message];
+		noteValue = message.noteNo;
+		[self movePaddle];
+	}
+	else if (message.messageType == MIDIMessageTypePitchBend)
+	{
+		pbOffset = message.pitchbend;
+		[self movePaddle];
 	}
 }
 
@@ -237,6 +261,9 @@ const CGFloat kBallVelocityY= 600;
 	self = [super initWithCoder:aDecoder];
 	if (self)
 	{
+		noteValue = 0;
+		pbOffset = 0;
+		
 		_seaboard = [[Seaboard alloc] init];
 		
 		self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
