@@ -110,7 +110,8 @@
 	{
 		Byte MSB = packet->data[2];
 		Byte LSB = packet->data[1];
-		return (MSB << 4) + LSB;
+
+		return (int)(MSB << 7) + LSB;
 	}
 	return -1;
 }

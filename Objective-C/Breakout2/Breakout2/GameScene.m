@@ -109,7 +109,6 @@ const CGFloat kBallVelocityY= 600;
 - (void)movePaddle
 {
 	float normalisedPitchBendOffset = ((pbOffset - 8192) / 8192.f) * 13;
-	NSLog(@"PB Offset: %d", pbOffset);
 	// Need to filter pb reset messages
 	if (normalisedPitchBendOffset > 12 || normalisedPitchBendOffset < -12)
 	{
@@ -123,9 +122,6 @@ const CGFloat kBallVelocityY= 600;
 
 - (CGPoint)getPositionForMIDINote:(float)note
 {
-	
-	NSLog(@"Note is : %f", note);
-	
 	note = (note < kMIDILeft ? kMIDILeft : note);
 	note = (note > kMIDIRight ? kMIDIRight : note);
 	
@@ -224,14 +220,12 @@ const CGFloat kBallVelocityY= 600;
 
 - (void)seaboardDidGetMIDIMessage:(MIDIMessage *)message
 {
-	
-	
 	if (message.messageType == MIDIMessageTypeNoteOn)
 	{
 		noteValue = message.noteNo;
 		[self movePaddle];
 	}
-	else if (message.messageType == MIDIMessageTypeAftertouch)
+	else if (message.messageType == MIDIMessageTypePitchBend)
 	{
 		pbOffset = message.pitchbend;
 		[self movePaddle];
