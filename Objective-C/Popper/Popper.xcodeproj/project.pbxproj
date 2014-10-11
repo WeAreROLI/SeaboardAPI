@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BCF8AA419E98FDA00F6FF11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8AA319E98FDA00F6FF11 /* main.m */; };
+		4BCF8AA719E98FDA00F6FF11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8AA619E98FDA00F6FF11 /* AppDelegate.m */; };
+		4BCF8AAA19E98FDA00F6FF11 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8AA919E98FDA00F6FF11 /* GameScene.m */; };
+		4BCF8AAC19E98FDA00F6FF11 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8AAB19E98FDA00F6FF11 /* GameScene.sks */; };
+		4BCF8AAE19E98FDA00F6FF11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8AAD19E98FDA00F6FF11 /* Images.xcassets */; };
+		4BCF8AB119E98FDA00F6FF11 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8AAF19E98FDA00F6FF11 /* MainMenu.xib */; };
+		4BCF8ABD19E98FDA00F6FF11 /* PopperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8ABC19E98FDA00F6FF11 /* PopperTests.m */; };
+		4BD6F0BC19E9C011009C0555 /* MIDIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD6F0B919E9C011009C0555 /* MIDIMessage.m */; };
+		4BD6F0BD19E9C011009C0555 /* Seaboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD6F0BB19E9C011009C0555 /* Seaboard.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BCF8AB719E98FDA00F6FF11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BCF8A9619E98FDA00F6FF11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BCF8A9D19E98FDA00F6FF11;
+			remoteInfo = Popper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4BCF8A9E19E98FDA00F6FF11 /* Popper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCF8AA219E98FDA00F6FF11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BCF8AA319E98FDA00F6FF11 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4BCF8AA519E98FDA00F6FF11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4BCF8AA619E98FDA00F6FF11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4BCF8AA819E98FDA00F6FF11 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		4BCF8AA919E98FDA00F6FF11 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		4BCF8AAB19E98FDA00F6FF11 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		4BCF8AAD19E98FDA00F6FF11 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4BCF8AB019E98FDA00F6FF11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4BCF8AB619E98FDA00F6FF11 /* PopperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCF8ABB19E98FDA00F6FF11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BCF8ABC19E98FDA00F6FF11 /* PopperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopperTests.m; sourceTree = "<group>"; };
+		4BD6F0B719E9C011009C0555 /* MIDIMessage+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIDIMessage+Private.h"; sourceTree = "<group>"; };
+		4BD6F0B819E9C011009C0555 /* MIDIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIMessage.h; sourceTree = "<group>"; };
+		4BD6F0B919E9C011009C0555 /* MIDIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIMessage.m; sourceTree = "<group>"; };
+		4BD6F0BA19E9C011009C0555 /* Seaboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seaboard.h; sourceTree = "<group>"; };
+		4BD6F0BB19E9C011009C0555 /* Seaboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seaboard.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BCF8A9B19E98FDA00F6FF11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8AB319E98FDA00F6FF11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BCF8A9519E98FDA00F6FF11 = {
+			isa = PBXGroup;
+			children = (
+				4BCF8AA019E98FDA00F6FF11 /* Popper */,
+				4BCF8AB919E98FDA00F6FF11 /* PopperTests */,
+				4BCF8A9F19E98FDA00F6FF11 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BCF8A9F19E98FDA00F6FF11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8A9E19E98FDA00F6FF11 /* Popper.app */,
+				4BCF8AB619E98FDA00F6FF11 /* PopperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BCF8AA019E98FDA00F6FF11 /* Popper */ = {
+			isa = PBXGroup;
+			children = (
+				4BD6F0B619E9C011009C0555 /* Seaboard Library */,
+				4BCF8AA519E98FDA00F6FF11 /* AppDelegate.h */,
+				4BCF8AA619E98FDA00F6FF11 /* AppDelegate.m */,
+				4BCF8AA819E98FDA00F6FF11 /* GameScene.h */,
+				4BCF8AA919E98FDA00F6FF11 /* GameScene.m */,
+				4BCF8AAB19E98FDA00F6FF11 /* GameScene.sks */,
+				4BCF8AAD19E98FDA00F6FF11 /* Images.xcassets */,
+				4BCF8AAF19E98FDA00F6FF11 /* MainMenu.xib */,
+				4BCF8AA119E98FDA00F6FF11 /* Supporting Files */,
+			);
+			path = Popper;
+			sourceTree = "<group>";
+		};
+		4BCF8AA119E98FDA00F6FF11 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8AA219E98FDA00F6FF11 /* Info.plist */,
+				4BCF8AA319E98FDA00F6FF11 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BCF8AB919E98FDA00F6FF11 /* PopperTests */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8ABC19E98FDA00F6FF11 /* PopperTests.m */,
+				4BCF8ABA19E98FDA00F6FF11 /* Supporting Files */,
+			);
+			path = PopperTests;
+			sourceTree = "<group>";
+		};
+		4BCF8ABA19E98FDA00F6FF11 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8ABB19E98FDA00F6FF11 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BD6F0B619E9C011009C0555 /* Seaboard Library */ = {
+			isa = PBXGroup;
+			children = (
+				4BD6F0B719E9C011009C0555 /* MIDIMessage+Private.h */,
+				4BD6F0B819E9C011009C0555 /* MIDIMessage.h */,
+				4BD6F0B919E9C011009C0555 /* MIDIMessage.m */,
+				4BD6F0BA19E9C011009C0555 /* Seaboard.h */,
+				4BD6F0BB19E9C011009C0555 /* Seaboard.m */,
+			);
+			path = "Seaboard Library";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BCF8A9D19E98FDA00F6FF11 /* Popper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCF8AC019E98FDA00F6FF11 /* Build configuration list for PBXNativeTarget "Popper" */;
+			buildPhases = (
+				4BCF8A9A19E98FDA00F6FF11 /* Sources */,
+				4BCF8A9B19E98FDA00F6FF11 /* Frameworks */,
+				4BCF8A9C19E98FDA00F6FF11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Popper;
+			productName = Popper;
+			productReference = 4BCF8A9E19E98FDA00F6FF11 /* Popper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4BCF8AB519E98FDA00F6FF11 /* PopperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCF8AC319E98FDA00F6FF11 /* Build configuration list for PBXNativeTarget "PopperTests" */;
+			buildPhases = (
+				4BCF8AB219E98FDA00F6FF11 /* Sources */,
+				4BCF8AB319E98FDA00F6FF11 /* Frameworks */,
+				4BCF8AB419E98FDA00F6FF11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BCF8AB819E98FDA00F6FF11 /* PBXTargetDependency */,
+			);
+			name = PopperTests;
+			productName = PopperTests;
+			productReference = 4BCF8AB619E98FDA00F6FF11 /* PopperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BCF8A9619E98FDA00F6FF11 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = ROLI;
+				TargetAttributes = {
+					4BCF8A9D19E98FDA00F6FF11 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					4BCF8AB519E98FDA00F6FF11 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 4BCF8A9D19E98FDA00F6FF11;
+					};
+				};
+			};
+			buildConfigurationList = 4BCF8A9919E98FDA00F6FF11 /* Build configuration list for PBXProject "Popper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BCF8A9519E98FDA00F6FF11;
+			productRefGroup = 4BCF8A9F19E98FDA00F6FF11 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BCF8A9D19E98FDA00F6FF11 /* Popper */,
+				4BCF8AB519E98FDA00F6FF11 /* PopperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BCF8A9C19E98FDA00F6FF11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCF8AAC19E98FDA00F6FF11 /* GameScene.sks in Resources */,
+				4BCF8AAE19E98FDA00F6FF11 /* Images.xcassets in Resources */,
+				4BCF8AB119E98FDA00F6FF11 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8AB419E98FDA00F6FF11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BCF8A9A19E98FDA00F6FF11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BD6F0BC19E9C011009C0555 /* MIDIMessage.m in Sources */,
+				4BCF8AA719E98FDA00F6FF11 /* AppDelegate.m in Sources */,
+				4BCF8AAA19E98FDA00F6FF11 /* GameScene.m in Sources */,
+				4BD6F0BD19E9C011009C0555 /* Seaboard.m in Sources */,
+				4BCF8AA419E98FDA00F6FF11 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8AB219E98FDA00F6FF11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCF8ABD19E98FDA00F6FF11 /* PopperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BCF8AB819E98FDA00F6FF11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BCF8A9D19E98FDA00F6FF11 /* Popper */;
+			targetProxy = 4BCF8AB719E98FDA00F6FF11 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4BCF8AAF19E98FDA00F6FF11 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BCF8AB019E98FDA00F6FF11 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BCF8ABE19E98FDA00F6FF11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4BCF8ABF19E98FDA00F6FF11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4BCF8AC119E98FDA00F6FF11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Popper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4BCF8AC219E98FDA00F6FF11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Popper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4BCF8AC419E98FDA00F6FF11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PopperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Popper.app/Contents/MacOS/Popper";
+			};
+			name = Debug;
+		};
+		4BCF8AC519E98FDA00F6FF11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PopperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Popper.app/Contents/MacOS/Popper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BCF8A9919E98FDA00F6FF11 /* Build configuration list for PBXProject "Popper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCF8ABE19E98FDA00F6FF11 /* Debug */,
+				4BCF8ABF19E98FDA00F6FF11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BCF8AC019E98FDA00F6FF11 /* Build configuration list for PBXNativeTarget "Popper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCF8AC119E98FDA00F6FF11 /* Debug */,
+				4BCF8AC219E98FDA00F6FF11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BCF8AC319E98FDA00F6FF11 /* Build configuration list for PBXNativeTarget "PopperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCF8AC419E98FDA00F6FF11 /* Debug */,
+				4BCF8AC519E98FDA00F6FF11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4BCF8A9619E98FDA00F6FF11 /* Project object */;
+}
