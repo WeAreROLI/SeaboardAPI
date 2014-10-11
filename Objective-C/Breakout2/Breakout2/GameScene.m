@@ -49,6 +49,30 @@ const CGFloat kBallVelocityX= 600;
 const CGFloat kBallVelocityY= 600;
 
 //======================================================================
+#pragma mark Footer Guide
+//======================================================================
+
+- (void)addGuide
+{
+	for (int i = kMIDILeft; i < kMIDIRight; i++)
+	{
+		const int fontSize = 10;
+		
+		SKLabelNode *label = [SKLabelNode node];
+		label.text = @"X";
+		label.fontColor = [SKColor whiteColor];
+		label.fontSize = fontSize;
+
+		int x = [self getPositionForMIDINote:i].x;
+		int y = fontSize;
+		
+		label.position = CGPointMake(x, y);
+		
+		[self addChild:label];
+	}
+}
+
+//======================================================================
 #pragma mark Blocks
 //======================================================================
 
@@ -273,6 +297,7 @@ const CGFloat kBallVelocityY= 600;
 		[self addBlocks:6];
 		[self addPaddle];
 		[self addInstructions];
+		[self addGuide];
 		
 		_seaboard.delegate = self;
 		[_seaboard connect];
