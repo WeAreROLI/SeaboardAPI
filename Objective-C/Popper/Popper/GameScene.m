@@ -48,7 +48,7 @@ const int kMIDIRight = 90;
 	sprite.name = [NSString stringWithFormat:@"balloon%d", note];
 	sprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:sprite.frame.size];
 	sprite.physicsBody.affectedByGravity = false;
-	sprite.physicsBody.velocity = CGVectorMake(0, 200);
+	sprite.physicsBody.velocity = CGVectorMake(0, 50);
 	sprite.physicsBody.friction = 0;
 	sprite.physicsBody.restitution = 1;
 	sprite.physicsBody.linearDamping = 0;
@@ -57,7 +57,7 @@ const int kMIDIRight = 90;
 	
 	SKLabelNode *label = [SKLabelNode node];
 	label.name = @"NoteNoLabel";
-	label.text = [MIDIMessage getNam];
+	label.text = [MIDIMessage getNameForNote:note];
 	label.fontColor = [SKColor whiteColor];
 	label.position = CGPointMake(CGRectGetMidX(sprite.frame), CGRectGetMidY(sprite.frame));
 	[sprite addChild:label];
