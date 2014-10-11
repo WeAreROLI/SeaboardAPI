@@ -56,10 +56,10 @@ const CGFloat kBallVelocityY= 600;
 {
 	for (int i = kMIDILeft; i < kMIDIRight; i++)
 	{
-		const int fontSize = 10;
+		const int fontSize = 12;
 		
 		SKLabelNode *label = [SKLabelNode node];
-		label.text = @"X";
+		label.text = [MIDIMessage getNameForNote:i];
 		label.fontColor = [SKColor whiteColor];
 		label.fontSize = fontSize;
 
