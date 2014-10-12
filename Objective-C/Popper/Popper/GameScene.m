@@ -19,8 +19,11 @@
 
 @implementation GameScene
 
-const int kMIDILeft = 20;
-const int kMIDIRight = 90;
+const int kMIDILeft = 25;
+const int kMIDIRight = 72;
+const float kBalloonScaleFactor = 4.0;
+const int kBalloonSpeedMax = 100;
+const int kBalloonSpeedMin = 30;
 
 //======================================================================
 #pragma mark Balloons
@@ -48,12 +51,16 @@ const int kMIDIRight = 90;
 	sprite.name = [NSString stringWithFormat:@"balloon%d", note];
 	sprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:sprite.frame.size];
 	sprite.physicsBody.affectedByGravity = false;
-	sprite.physicsBody.velocity = CGVectorMake(0, 50);
+	int balloonSpeed = kBalloonSpeedMin + (arc4random() % (kBalloonSpeedMax - kBalloonSpeedMin));
+	sprite.physicsBody.velocity = CGVectorMake(0, balloonSpeed);
 	sprite.physicsBody.friction = 0;
 	sprite.physicsBody.restitution = 1;
 	sprite.physicsBody.linearDamping = 0;
 	sprite.physicsBody.allowsRotation = true;
 	sprite.physicsBody.usesPreciseCollisionDetection = false;
+	
+	sprite.color = [SKColor colorWithDeviceRed:((arc4random() % 100) / 100.0) green:((arc4random() % 100) / 100.0) blue:((arc4random() % 100) / 100.0) alpha:1.0];
+	sprite.colorBlendFactor = 1.0;
 	
 	SKLabelNode *label = [SKLabelNode node];
 	label.name = @"NoteNoLabel";
@@ -63,6 +70,7 @@ const int kMIDIRight = 90;
 	[sprite addChild:label];
 	
 	[self addChild:sprite];
+	sprite.position = [self getPositionForMIDINote:note];
 	return sprite;
 }
 
@@ -77,7 +85,7 @@ const int kMIDIRight = 90;
 		int balloonNote = [[balloon.name stringByReplacingOccurrencesOfString:@"balloon" withString:@""] intValue];
 		if (balloonNote == note)
 		{
-			if (factor > 1.9)
+			if (factor > kBalloonScaleFactor - 0.1)
 			{
 				[balloon removeFromParent];
 			}
@@ -87,6 +95,20 @@ const int kMIDIRight = 90;
 			}
 		}
 	}
+}
+
+- (CGPoint)getPositionForMIDINote:(float)note
+{
+	note = (note < kMIDILeft ? kMIDILeft : note);
+	note = (note > kMIDIRight ? kMIDIRight : note);
+	
+	int noteCount = kMIDIRight - kMIDILeft;
+	CGFloat normalisedPosition = (note - kMIDILeft) / (float)noteCount;
+	
+	CGFloat x = self.frame.size.width * normalisedPosition;
+	CGFloat y = 50;
+	
+	return CGPointMake(x, y);
 }
 
 //======================================================================
@@ -99,7 +121,7 @@ const int kMIDIRight = 90;
 	{
 		int aftertouch = message.pressure;
 		float normAftertouch = aftertouch / 127.f;
-		float scale = 1.0 + normAftertouch;
+		float scale = 1.0 + (normAftertouch * kBalloonScaleFactor);
 		
 		[self setScaleForBalloon:message.noteNo withFactor:scale];
 	}
@@ -118,7 +140,7 @@ const int kMIDIRight = 90;
 {
 	for (SKSpriteNode *sprite in [self children])
 	{
-		if ([sprite.name hasPrefix:@"balloon"] && sprite.position.y >= (self.frame.size.height - sprite.size.height / 1.8))
+		if ([sprite.name hasPrefix:@"balloon"] && sprite.position.y >= (self.frame.size.height - sprite.size.height / 1.5))
 		{
 			[sprite removeFromParent];
 		}
@@ -131,16 +153,7 @@ const int kMIDIRight = 90;
 
 - (void)balloonGenerator
 {
-	SKSpriteNode *balloon = [self addBalloon];
-
-	int minX	= balloon.size.width / 2;
-	int maxX	= self.frame.size.width - balloon.size.width / 2;
-	int rangeX	= maxX - minX;
-	int y		= balloon.size.height / 2;
-	
-	int x = minX + arc4random() % rangeX;
-	
-	balloon.position = CGPointMake(x, y);
+	[self addBalloon];
 }
 
 //======================================================================

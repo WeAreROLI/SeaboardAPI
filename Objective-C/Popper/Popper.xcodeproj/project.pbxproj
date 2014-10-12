@@ -16,6 +16,7 @@
 		4BCF8ABD19E98FDA00F6FF11 /* PopperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8ABC19E98FDA00F6FF11 /* PopperTests.m */; };
 		4BD6F0C419E9C450009C0555 /* MIDIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD6F0C119E9C450009C0555 /* MIDIMessage.m */; };
 		4BD6F0C519E9C450009C0555 /* Seaboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD6F0C319E9C450009C0555 /* Seaboard.m */; };
+		4BD6F0C719E9CCD0009C0555 /* balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BD6F0C619E9CCD0009C0555 /* balloon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4BD6F0C119E9C450009C0555 /* MIDIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIMessage.m; sourceTree = "<group>"; };
 		4BD6F0C219E9C450009C0555 /* Seaboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seaboard.h; sourceTree = "<group>"; };
 		4BD6F0C319E9C450009C0555 /* Seaboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seaboard.m; sourceTree = "<group>"; };
+		4BD6F0C619E9CCD0009C0555 /* balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				4BCF8AA919E98FDA00F6FF11 /* GameScene.m */,
 				4BCF8AAB19E98FDA00F6FF11 /* GameScene.sks */,
 				4BCF8AAD19E98FDA00F6FF11 /* Images.xcassets */,
+				4BD6F0C619E9CCD0009C0555 /* balloon.png */,
 				4BCF8AAF19E98FDA00F6FF11 /* MainMenu.xib */,
 				4BCF8AA119E98FDA00F6FF11 /* Supporting Files */,
 			);
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BCF8AAC19E98FDA00F6FF11 /* GameScene.sks in Resources */,
+				4BD6F0C719E9CCD0009C0555 /* balloon.png in Resources */,
 				4BCF8AAE19E98FDA00F6FF11 /* Images.xcassets in Resources */,
 				4BCF8AB119E98FDA00F6FF11 /* MainMenu.xib in Resources */,
 			);
