@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWn-Di-MhF">
+                                <rect key="frame" x="20" y="974" width="728" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Connect to Seaboard">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectToSeaboardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BhU-T9-oY0"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jal-58-cYt">
+                                <rect key="frame" x="20" y="49" width="728" height="917"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seaboard Output Console" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNw-W9-7zM">
+                                <rect key="frame" x="20" y="20" width="728" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93098294010000004" green="0.93098294010000004" blue="0.93098294010000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sNw-W9-7zM" secondAttribute="trailing" constant="20" id="8Yi-rY-H7U"/>
+                            <constraint firstItem="Jal-58-cYt" firstAttribute="top" secondItem="sNw-W9-7zM" secondAttribute="bottom" constant="8" id="PzI-va-gqG"/>
+                            <constraint firstItem="Jal-58-cYt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="VPe-3w-1Zp"/>
+                            <constraint firstItem="sNw-W9-7zM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Y94-IF-kMD"/>
+                            <constraint firstAttribute="trailing" secondItem="cWn-Di-MhF" secondAttribute="trailing" constant="20" id="aQ0-DW-263"/>
+                            <constraint firstAttribute="trailing" secondItem="Jal-58-cYt" secondAttribute="trailing" constant="20" id="ah9-Wv-6O7"/>
+                            <constraint firstItem="cWn-Di-MhF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="dIZ-Jd-ISv"/>
+                            <constraint firstItem="sNw-W9-7zM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="hJE-gZ-UJF"/>
+                            <constraint firstItem="cWn-Di-MhF" firstAttribute="top" secondItem="Jal-58-cYt" secondAttribute="bottom" constant="8" id="k8D-NW-JWu"/>
+                            <constraint firstItem="Jal-58-cYt" firstAttribute="top" secondItem="sNw-W9-7zM" secondAttribute="bottom" constant="8" id="oEg-uk-73P"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cWn-Di-MhF" secondAttribute="bottom" constant="20" id="sVR-Pz-6Gj"/>
+                            <constraint firstItem="cWn-Di-MhF" firstAttribute="top" secondItem="Jal-58-cYt" secondAttribute="bottom" constant="8" id="zJv-ce-2fo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logger" destination="Jal-58-cYt" id="O4u-SY-wJq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
