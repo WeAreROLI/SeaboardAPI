@@ -15,6 +15,21 @@ If you have not yet, please visit our official [ROLI Music Hack Day Intro Page](
 - Connect a Seaboard (ask someone with a ROLI t-shirt)
 - Build in Xcode
 
+###CINDER Quick Start
+
+- Place the project file next to your "Cinder" framework directory.
+- Select the midi device index of the Seaboard GRAND.
+- Edit the number of notes variable to the size of your Seaboard GRAND.
+- Run the Cinder project
+
+###PROCESSING Quick Start
+
+- Place the "midibus" library in your processing libraries folder.
+- Place the example project in your sketches folder
+- Select the midi device index of the Seaboard GRAND.
+- Edit the number of notes variable to the size of your Seaboard GRAND.
+- Run the Processing sketch.
+
 ###Max/MSP Quick Start
 
 - [Install Max/MSP](http://cycling74.com/products/max/) free 30 day trial (we have copies on USB sticks if downloading is slow)
