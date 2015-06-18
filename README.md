@@ -13,6 +13,11 @@ This repository contains tutorial content to get hackers started with the Seaboa
 - Connect a Seaboard (ask someone with a ROLI t-shirt)
 - Build in Xcode
 
+###OPENFRAMEWORKS Quick Start
+
+- Put the ofMidi addon inside your ofAddons folder
+- Run the modified midi example in the addon folder
+
 ###CINDER Quick Start
 
 - Place the project file next to your "Cinder" framework directory.
