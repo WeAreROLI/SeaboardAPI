@@ -40,7 +40,7 @@ class CinderSeaboardOSCApp : public AppNative {
     // SEABOARD MIDI INFORMATION /////////////////////////////////////
     
     // set how many keys the seaboard has
-    const static int numNotes = 74;
+    const static int numNotes = 63;
     
     int currentNum;
     
@@ -53,14 +53,14 @@ class CinderSeaboardOSCApp : public AppNative {
     float afterTouch    [numNotes];
     float cc            [numNotes];
     
-    int lastChannelNotes [16];
+    int lastChannelNotes [10];
 };
 
 
 
 
 void CinderSeaboardOSCApp::prepareSettings( Settings *settings ){
-    settings->setWindowSize( 800, 500 );
+    settings->setWindowSize( 500, 500 );
     //settings->setFrameRate( 60.0f );
 }
 
@@ -72,9 +72,10 @@ void CinderSeaboardOSCApp::setup()
     {
         console() << mInput.getPortName(i) << endl;
     }
-    mInput.openPort(0);
+    mInput.openPort(2);
     
     mInput.midiSignal.connect(boost::bind(&CinderSeaboardOSCApp::midiListener, this, boost::arg<1>::arg()));
+    
     
     // OSC SETUP
     port = 3000;
@@ -91,7 +92,7 @@ void CinderSeaboardOSCApp::setup()
     
     // handles the size of the keyboard variable
     if (numNotes == 25) startNote = 60;
-    startNote = 21;
+    if (numNotes == 63) startNote = 35;
     if (numNotes == 88) startNote = 0;
     
     for (int i = 0; i < numNotes; ++i)
@@ -104,7 +105,7 @@ void CinderSeaboardOSCApp::setup()
         
     }
     
-    for (int i = 0; i < 16; i++)
+    for (int i = 0; i < 10; i++)
     {
         lastChannelNotes[i] = 0;
     }

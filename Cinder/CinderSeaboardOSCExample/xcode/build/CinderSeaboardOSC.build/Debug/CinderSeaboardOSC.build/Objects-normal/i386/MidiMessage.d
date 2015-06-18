@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/felixfaire/Developer/CinderSeaboardOSC/blocks/Midi2/src/MidiMessage.cpp \
-  /Users/felixfaire/Developer/CinderSeaboardOSC/xcode/../blocks/Midi2/include/MidiMessage.h
+  /Users/felixfaire/Developer/CinderSeaboardOSCExample/blocks/Midi2/src/MidiMessage.cpp \
+  /Users/felixfaire/Developer/CinderSeaboardOSCExample/xcode/../blocks/Midi2/include/MidiMessage.h
