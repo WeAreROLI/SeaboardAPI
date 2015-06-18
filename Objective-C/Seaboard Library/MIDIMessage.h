@@ -30,4 +30,6 @@ typedef enum
 - (instancetype)initWithMidiPacket:(MIDIPacket*)packet;
 - (NSString*)description;
 
++ (NSString*)getNameForNote:(int)note;
+
 @end

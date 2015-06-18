@@ -110,9 +110,21 @@
 	{
 		Byte MSB = packet->data[2];
 		Byte LSB = packet->data[1];
-		return (MSB << 4) + LSB;
+
+		return (int)(MSB << 7) + LSB;
 	}
 	return -1;
+}
+
++ (NSString *)getNameForNote:(int)note
+{
+	NSArray *noteString = [NSArray arrayWithObjects:@"C", @"C#", @"D", @"D#", @"E", @"F", @"F#", @"G", @"G#", @"A", @"A#", @"B", nil];
+	
+	int octave = (note / 12) - 1;
+	int noteIndex = (note % 12);
+	
+	return [NSString stringWithFormat:@"%@%d", noteString[noteIndex], octave];
+
 }
 
 @end

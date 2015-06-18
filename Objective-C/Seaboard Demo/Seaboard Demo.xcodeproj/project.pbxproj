@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4BB9430719B8A485007D1051 /* MIDIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9430619B8A485007D1051 /* MIDIMessage.m */; };
+		4B9F7D0F19E55DE500D68682 /* MIDIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F7D0C19E55DE500D68682 /* MIDIMessage.m */; };
+		4B9F7D1019E55DE500D68682 /* Seaboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F7D0E19E55DE500D68682 /* Seaboard.m */; };
 		4BE5544F19B74F4F00D16D47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5544E19B74F4F00D16D47 /* Foundation.framework */; };
 		4BE5545119B74F4F00D16D47 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5545019B74F4F00D16D47 /* CoreGraphics.framework */; };
 		4BE5545319B74F4F00D16D47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5545219B74F4F00D16D47 /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		4BE5547319B74F4F00D16D47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5545219B74F4F00D16D47 /* UIKit.framework */; };
 		4BE5547B19B74F4F00D16D47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BE5547919B74F4F00D16D47 /* InfoPlist.strings */; };
 		4BE5547D19B74F4F00D16D47 /* Seaboard_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE5547C19B74F4F00D16D47 /* Seaboard_DemoTests.m */; };
-		4BE5548819B74F7E00D16D47 /* Seaboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE5548719B74F7E00D16D47 /* Seaboard.m */; };
 		4BE5548A19B7504200D16D47 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE5548919B7504200D16D47 /* CoreMIDI.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4BB9430519B8A485007D1051 /* MIDIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIMessage.h; sourceTree = "<group>"; };
-		4BB9430619B8A485007D1051 /* MIDIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIMessage.m; sourceTree = "<group>"; };
+		4B9F7D0B19E55DE500D68682 /* MIDIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIMessage.h; sourceTree = "<group>"; };
+		4B9F7D0C19E55DE500D68682 /* MIDIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIMessage.m; sourceTree = "<group>"; };
+		4B9F7D0D19E55DE500D68682 /* Seaboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seaboard.h; sourceTree = "<group>"; };
+		4B9F7D0E19E55DE500D68682 /* Seaboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seaboard.m; sourceTree = "<group>"; };
+		4BA03DB719E5642D005873EE /* MIDIMessage+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MIDIMessage+Private.h"; sourceTree = "<group>"; };
 		4BE5544B19B74F4F00D16D47 /* Seaboard Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seaboard Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE5544E19B74F4F00D16D47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BE5545019B74F4F00D16D47 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,8 +63,6 @@
 		4BE5547819B74F4F00D16D47 /* Seaboard DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Seaboard DemoTests-Info.plist"; sourceTree = "<group>"; };
 		4BE5547A19B74F4F00D16D47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4BE5547C19B74F4F00D16D47 /* Seaboard_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Seaboard_DemoTests.m; sourceTree = "<group>"; };
-		4BE5548619B74F7E00D16D47 /* Seaboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seaboard.h; sourceTree = "<group>"; };
-		4BE5548719B74F7E00D16D47 /* Seaboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seaboard.m; sourceTree = "<group>"; };
 		4BE5548919B7504200D16D47 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -90,6 +91,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B9F7D0A19E55DE500D68682 /* Seaboard Library */ = {
+			isa = PBXGroup;
+			children = (
+				4B9F7D0B19E55DE500D68682 /* MIDIMessage.h */,
+				4BA03DB719E5642D005873EE /* MIDIMessage+Private.h */,
+				4B9F7D0C19E55DE500D68682 /* MIDIMessage.m */,
+				4B9F7D0D19E55DE500D68682 /* Seaboard.h */,
+				4B9F7D0E19E55DE500D68682 /* Seaboard.m */,
+			);
+			name = "Seaboard Library";
+			path = "../../Seaboard Library";
+			sourceTree = "<group>";
+		};
 		4BE5544219B74F4F00D16D47 = {
 			isa = PBXGroup;
 			children = (
@@ -124,14 +138,11 @@
 		4BE5545419B74F4F00D16D47 /* Seaboard Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4B9F7D0A19E55DE500D68682 /* Seaboard Library */,
 				4BE5545D19B74F4F00D16D47 /* AppDelegate.h */,
 				4BE5545E19B74F4F00D16D47 /* AppDelegate.m */,
 				4BE5546019B74F4F00D16D47 /* Main_iPhone.storyboard */,
 				4BE5546319B74F4F00D16D47 /* Main_iPad.storyboard */,
-				4BB9430519B8A485007D1051 /* MIDIMessage.h */,
-				4BB9430619B8A485007D1051 /* MIDIMessage.m */,
-				4BE5548619B74F7E00D16D47 /* Seaboard.h */,
-				4BE5548719B74F7E00D16D47 /* Seaboard.m */,
 				4BE5546619B74F4F00D16D47 /* ViewController.h */,
 				4BE5546719B74F4F00D16D47 /* ViewController.m */,
 				4BE5546919B74F4F00D16D47 /* Images.xcassets */,
@@ -267,10 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BB9430719B8A485007D1051 /* MIDIMessage.m in Sources */,
+				4B9F7D0F19E55DE500D68682 /* MIDIMessage.m in Sources */,
 				4BE5546819B74F4F00D16D47 /* ViewController.m in Sources */,
 				4BE5545F19B74F4F00D16D47 /* AppDelegate.m in Sources */,
-				4BE5548819B74F7E00D16D47 /* Seaboard.m in Sources */,
+				4B9F7D1019E55DE500D68682 /* Seaboard.m in Sources */,
 				4BE5545B19B74F4F00D16D47 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christopher Fonseka (3C44J89HQ4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Seaboard Demo/Seaboard Demo-Prefix.pch";
 				INFOPLIST_FILE = "Seaboard Demo/Seaboard Demo-Info.plist";
@@ -419,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christopher Fonseka (3C44J89HQ4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Seaboard Demo/Seaboard Demo-Prefix.pch";
 				INFOPLIST_FILE = "Seaboard Demo/Seaboard Demo-Info.plist";

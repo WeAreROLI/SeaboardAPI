@@ -8,7 +8,16 @@
 
 #import "Seaboard.h"
 #import <CoreMIDI/CoreMIDI.h>
-#import "MIDIMessage.h"
+#import "MIDIMessage+Private.h"
+
+//======================================================================
+#pragma mark Private Interface
+//======================================================================
+@interface Seaboard ()
+
+@property (nonatomic, retain) NSMutableDictionary* channelDict;
+
+@end
 
 //======================================================================
 #pragma mark Static Callback Methods
@@ -26,6 +35,7 @@ void MIDINotifyCallback(const MIDINotification *message, void *refCon);
 	self = [super init];
 	if (self)
 	{
+		_channelDict = [NSMutableDictionary dictionary];
 	}
 	return self;
 }
@@ -60,7 +70,7 @@ void MIDINotifyCallback(const MIDINotification *message, void *refCon);
 //======================================================================
 #pragma mark Delegate Handlers
 //======================================================================
-- (void)sendMessageToDelegates:(MIDIMessage *)message
+- (void)sendMessageToDelegates:(MIDIMessage*)message
 {
 	if ([self.delegate respondsToSelector:@selector(seaboardDidGetMIDIMessage:)])
 	{
@@ -92,6 +102,50 @@ void MIDINotifyCallback (const MIDINotification  *message, void *refCon)
 {
 	Seaboard *sb = (__bridge Seaboard*)refCon;
 	[sb printToDelegate:@"MIDI Notify"];
+}
+
+//======================================================================
+#pragma mark NSNumbers are Annoying
+//======================================================================
+- (int)getNoteNumberForChannel:(int)channel
+{
+	return [[self.channelDict objectForKey:[NSNumber numberWithInt:channel]] intValue];
+}
+
+- (void)setNoteNumber:(int)noteNo ForChannel:(int)channel
+{
+	NSNumber *noteNum		= [NSNumber numberWithInt:noteNo];
+	NSNumber *channelNum	= [NSNumber numberWithInt:channel];
+	
+	[self.channelDict setObject:noteNum forKey:channelNum];
+}
+
+//======================================================================
+#pragma mark Polyphonic Pitch Bend Hacking
+//======================================================================
+- (void)applyPitchBendHack:(MIDIMessage*)message
+{
+	switch (message.messageType)
+	{
+		// If note on, mark channel array with note number
+		case MIDIMessageTypeNoteOn:
+			[self setNoteNumber:message.noteNo ForChannel:message.channel];
+			break;
+			
+		// if note off, clear channel array
+		case MIDIMessageTypeNoteOff:
+			[self setNoteNumber:-1 ForChannel:message.channel];
+			break;
+		
+		// if pitch bend, append channel number
+		case MIDIMessageTypePitchBend:
+			[message setNoteNo:[self getNoteNumberForChannel:message.channel]];
+			break;
+			
+		default:
+			break;
+	}
+	
 }
 
 @end
