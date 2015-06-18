@@ -6,7 +6,7 @@ import javax.sound.midi.ShortMessage;
 MidiBus myBus; // The MidiBus
 
 // set how many keys the seaboard has
-int numNotes = 37;
+int numNotes = 63;
     
 int currentNum;
 int startNote;
@@ -93,7 +93,8 @@ void rawMidi(byte[] data) {
   
   int noteNum = (int)(data[1]);
   int channel = (int)(data[0] & 0x0F);
-  int value =   (int)(data[2]);
+  int value =   0;
+  if (data.length > 2) value = (int)(data[2]);
   currentNum = noteNum;
   
   switch ((byte)(data[0] & 0xF0))
