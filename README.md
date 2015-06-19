@@ -1,8 +1,8 @@
-#Music Hack Day
+#Seaboard GRAND APIs
 
 This repository contains tutorial content to get hackers started with the Seaboard GRAND.
 
-[![Seaboard](https://www.roli.com/wp-content/uploads/2014/05/Seaboard-GRAND-LFE-Standing.png)](roli.com/seaboard)
+[![Seaboard](https://roli.com/assets/img/product-page/product-page-header-wide.jpg)](roli.com/products/seaboard-grand)
 
 ###JUCE Quick Start
 
