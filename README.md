@@ -13,19 +13,19 @@ This repository contains tutorial content to get hackers started with the Seaboa
 - Connect a Seaboard (ask someone with a ROLI t-shirt)
 - Build in Xcode
 
-###OPENFRAMEWORKS Quick Start
+###openFrameworks Quick Start
 
 - Put the ofMidi addon inside your ofAddons folder
 - Run the modified midi example in the addon folder
 
-###CINDER Quick Start
+###Cinder Quick Start
 
 - Place the project file next to your "Cinder" framework directory.
 - Select the midi device index of the Seaboard GRAND.
 - Edit the number of notes variable to the size of your Seaboard GRAND.
 - Run the Cinder project
 
-###PROCESSING Quick Start
+###Processing Quick Start
 
 - Place the "midibus" library in your processing libraries folder.
 - Place the example project in your sketches folder
@@ -46,6 +46,15 @@ This repository contains tutorial content to get hackers started with the Seaboa
 - Connect a Seaboard (ask someone with a ROLI t-shirt)
 - Launch Terminal on Mac or Linux, or a Python Environment in Windows
 - Navigate to your repo directory and use `python pySeaboard.py Seaboard` to launch
+
+###SuperCollider Quick Start
+- Install [SuperCollider](https://supercollider.github.io/)
+- Clone this repo
+- Connect a Seaboard
+- Boot your SuperCollider server
+- Run Seaboard.scd
+- Credit to @abdxyz
+
 
 ###Feedback
 
