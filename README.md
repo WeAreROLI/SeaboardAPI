@@ -6,7 +6,7 @@ This repository contains tutorial content to get hackers started with the Seaboa
 
 ###JUCE Quick Start
 
-- Check out [JUCE](http://www.juce.com/about-juce) for background info
+- Check out [JUCE](http://www.juce.com/discover) for background info
 - Clone this repo
 - Launch one of the `.jucer` Seaboard example files using Introjucer.app
 - Choose 'Save Project and Open in Xcode...'
