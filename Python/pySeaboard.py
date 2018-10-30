@@ -53,19 +53,19 @@ class SeaboardInputHandler(object):
     byte0 = midiData[0]
 
     if byte0 >= MIDI_OFF and byte0 < MIDI_ON:
-      print "Note Off"
+      print ("Note Off")
       self.noteOff(midiData)
 
     elif byte0 >= MIDI_ON and byte0 < MIDI_POLY_AFTERTOUCH:
-      print "Note On"
+      print ("Note On")
       self.noteOn(midiData)
 
     elif byte0 >= MIDI_POLY_AFTERTOUCH and byte0 < MIDI_CC:
-      print "Aftertouch"
+      print ("Aftertouch")
       self.aftertouch(midiData)
 
     elif byte0 >= MIDI_PITCH_BEND and byte0 < MIDI_SYSEX:
-      print "MIDI Pitch Bend"
+      print ("MIDI Pitch Bend")
       self.pitchbend(midiData)
 
   # MIDI Message Callback Methods
@@ -74,20 +74,20 @@ class SeaboardInputHandler(object):
     note = data[1]
     velocity = data[2]
     self.channelNoteArray[channel] = note
-    print "Note On - Ch:" + str(channel) + " Note:" + str(note) + " Velocity:" + str(velocity)
+    print ("Note On - Ch" + str(channel) + " Note:" + str(note) + " Velocity:" + str(velocity))
 
   def noteOff(self, data):
     channel = (data[0] & 0xF) + 1
     note = data[1]
     velocity = data[2]
     self.channelNoteArray[channel] = -1
-    print "Note Off - Ch:" + str(channel) + " Note:" + str(note) + " Velocity:" + str(velocity)
+    print ("Note Off - Ch" + str(channel) + " Note:" + str(note) + " Velocity:" + str(velocity))
 
   def aftertouch(self, data):
     channel = (data[0] & 0xF) + 1
     note = data[1]
     pressure = data[2]
-    print "Aftertouch - Ch:" + str(channel) + " Note:" + str(note) + " Pressure:" + str(pressure)
+    print ("Aftertouch - Ch" + str(channel) + " Note:" + str(note) + " Pressure:" + str(pressure))
 
   def pitchbend(self, data):
     channel = (data[0] & 0xF) + 1
@@ -95,7 +95,7 @@ class SeaboardInputHandler(object):
     LSB = data[1]
     bend = (MSB << 4) + LSB
     note = self.channelNoteArray[channel]
-    print "Pitch Bend - Ch: " + str(channel) + " Note:" + str(note) + " Bend:" + str(bend)
+    print ("Pitch Bend - Ch" + str(channel) + " Note:" + str(note) + " Bend:" + str(bend))
 
 """
   MIDI Input Device Connection Establishment
